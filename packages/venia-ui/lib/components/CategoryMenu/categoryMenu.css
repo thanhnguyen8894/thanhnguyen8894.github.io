@@ -1,0 +1,230 @@
+.menuWrap>nav>ul:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+/*----- Menu Outline -----*/
+
+.menuWrap {
+    width: 100%;
+    margin: 0px auto;
+    font-size: 16px;
+}
+
+.menuWrap>nav {
+    /*width: 1000px;*/
+    margin: 0px auto;
+}
+
+.menuWrap li {
+    margin: 0px;
+    list-style: none;
+}
+
+.menuWrap a {
+    /* transition: all linear 0.25s; */
+    text-decoration: none;
+}
+
+.menuWrap .current>a {
+    color: #0dd;
+}
+
+.menuWrap .downArrow {
+    font-size: 0.5em;
+}
+
+.menuWrap .leftArrow {
+    float: right;
+    font-size: 0.5em;
+    line-height: 250%;
+}
+
+/*----- Top Level -----*/
+.menuWrap>nav>ul>li {
+    float: left;
+    position: relative;
+    font-size: 1em;
+}
+
+.menuWrap>nav>ul>li>a {
+    padding: 10px 10px;
+    display: inline-block;
+    /* text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4); */
+}
+
+.menuWrap .root>li:hover>a,
+.menuWrap .root>.current>a,
+.menuWrap .root>li>a:focus {
+    background: #f4f4f4;
+}
+
+.menuWrap .hasChild:hover>a {
+    cursor: default;
+}
+
+
+/*----- General Sub Menu -----*/
+.menuWrap .root ul {
+    min-width: 240px;
+    visibility: hidden;
+    padding: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    background: #f9f9f9;
+    transition: all .35s ease-in-out;
+    /* transition: visibility .35s ease-in-out, opacity .35s ease-in-out; */
+}
+
+.menuWrap li:hover>ul {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menuWrap .root>li li {
+    font-size: 1em;
+    min-height: 45px;
+    /* max-height: 35px; */
+}
+
+.menuWrap .root>li li>a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.menuWrap .root>li li:hover>a,
+.menuWrap .root>li .current>a,
+.menuWrap .root>li>ul a:focus {
+    background: #f4f4f4;
+}
+
+/*----- Menu Level 1 -----*/
+.menuWrap .levelOne {
+    width: 120%;
+    left: 0px;
+}
+
+.hasMoreItems {
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+/* scroll */
+.hasMoreItems::-webkit-scrollbar {
+    width: 4px;
+    height: 12px;
+}
+
+.hasMoreItems::-webkit-scrollbar-corner .hasMoreItems::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.hasMoreItems::-webkit-scrollbar-thumb:horizontal {
+    background: transparent linear-gradient(90deg, #2962ff 0%, #2668fc 31%, #00b8d4 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 3px #00000029;
+    border-radius: 12px;
+}
+
+.hasMoreItems::-webkit-scrollbar-thumb:vertical {
+    background: linear-gradient(180deg, #2962ff, #2668fc, #00b8d4);
+    box-shadow: 0px 1px 3px #00000029;
+    border-radius: 12px;
+}
+
+/*----- Menu Level 2 -> 5 -----*/
+.menuWrap .levelTwo,
+.menuWrap .levelThree,
+.menuWrap .levelFour,
+.menuWrap .levelFive {
+    width: 0%;
+    top: -14%;
+    left: 100%;
+}
+
+.menuWrap .levelOne>li:hover>.levelTwo,
+.menuWrap .levelTwo>li:hover>.levelThree,
+.menuWrap .levelTwo>li:hover>.levelFour,
+.menuWrap .levelTwo>li:hover>.levelFive {
+    width: 100%;
+    min-height: 100%;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--venia-black-color);
+    background: transparent !important;
+}
+
+.body {
+    top: 58px !important;
+    left: 0px !important;
+    box-shadow: 0 0 5px 0 rgb(0 0 6 / 14%);
+}
+
+.body:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    top: -3px;
+    background-color: #000;
+}
+
+.rootTitle {
+    position: relative;
+    display: flex;
+}
+
+/* mode rtl */
+.rtl.menuWrap .levelTwo,
+.rtl.menuWrap .levelThree,
+.rtl.menuWrap .levelFour,
+.rtl.menuWrap .levelFive {
+    left: -100% !important;
+}
+
+.rtl .body {
+    left: auto !important;
+}
+
+.rtl.menuWrap .leftArrow {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 1025px) and (max-width: 1215px) {
+    .menuWrap .root ul {
+        min-width: 200px;
+    }
+
+    .menuWrap .root>li li,
+    .menuWrap>nav>ul>li {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 600px) {
+    .noChild a {
+        padding: 10px 15px !important;
+    }
+
+    .menuWrap .noChild {
+        min-height: 30px;
+        max-height: 30px;
+    }
+
+    .menuWrap .root>li li {
+        font-size: 1em;
+        min-height: auto;
+        max-height: 35px;
+    }
+    .menuWrap .root>li li>a {
+        padding: 5px 15px;
+    }
+}

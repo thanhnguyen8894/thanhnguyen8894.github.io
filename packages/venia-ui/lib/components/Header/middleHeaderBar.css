@@ -1,0 +1,135 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 105px;
+    color: white;
+    padding: 0 15px;
+}
+
+.open {
+    composes: root;
+    flex-direction: column;
+    height: 100px !important;
+}
+
+.close {
+    composes: root;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--venia-global-maxWidth);
+}
+
+.middleHeaderColumn {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-flow: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 15px;
+}
+
+.middleHeaderColumnLeft {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-flow: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 6.25rem;
+}
+
+.imageWrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButtonWrapper {
+    background-color: #00AFAA;
+    color: white;
+    height: 40px;
+    font-size: 14px;
+}
+
+.ButtonWishlistWrapper {
+    min-width: 130px;
+}
+
+/* tablet */
+.tablet {
+    height: 100px;
+}
+
+.tablet .middleHeaderColumn {
+    grid-gap: 20px;
+}
+
+.tablet .ButtonWishlistWrapper {
+    min-width: 40px;
+}
+
+/* mobile */
+.mobile {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    height: 60px;
+}
+
+.ButtonUserWrapper {
+    background-color: white;
+    min-width: auto;
+    height: 100%;
+    padding: 7px;
+}
+
+.mobile .middleHeaderColumn {
+    grid-template-columns: none;
+    column-gap: 20px;
+}
+
+.userIconImage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15.6px;
+    color: var(--venia-black-color);
+}
+
+::-webkit-input-placeholder {
+    /* Edge */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15.6px;
+    color: var(--venia-black-color);
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15.6px;
+    color: var(--venia-black-color);
+}
+
+.mobile .middleHeaderColumnLeft {
+    grid-template-columns: none;
+    justify-content: flex-end;
+}

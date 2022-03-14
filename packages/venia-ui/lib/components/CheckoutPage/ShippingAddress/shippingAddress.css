@@ -1,0 +1,239 @@
+.rootMobile,
+.root {
+    display: grid;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    border: 1px solid black;
+    padding: 18px 20px;
+    /* gap: 5px; */
+    font-size: 14px;
+    color: var(--venia-black-color);
+    line-height: 16.8px;
+}
+
+.addNew {
+    color: var(--venia-black-color);
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    display: grid;
+    gap: 20px;
+}
+
+.title {
+    align-items: center;
+    height: 20px;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+
+.showAddress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.img {
+    width: 15px;
+    height: 15px;
+    color: var(--venia-black-color);
+    margin: 0 13px;
+    margin-inline-start: auto;
+}
+
+.button {
+    outline: none;
+}
+
+.phone {
+    width: 100% !important;
+    border-color: var(--venia-black-color) !important;
+    border-radius: 0 !important;
+    height: 50px !important;
+    padding-left: 80px !important;
+    -webkit-appearance: none !important;
+}
+
+.flagButton {
+    width: 72px !important;
+    background-color: #fff !important;
+    border-right-width: 0 !important;
+    border-color: var(--venia-black-color) !important;
+    padding-left: 10px !important;
+}
+
+.flagButton:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 1px;
+    height: 20px;
+    background-color: #cdcdcd;
+}
+
+.flagButton [class^='selected-flag'] {
+    width: 100% !important;
+    border-color: #cdcdcd !important;
+    background-color: unset !important;
+    margin-right: 6px;
+}
+
+.flagButton [class^=' country-list'] {
+    width: 350px;
+}
+
+.flagButton [class^='flag'] {
+    transform: scale(1.7) !important;
+}
+
+.flagButton [class^='dial-code'] {
+    margin-right: 10px;
+}
+
+.flagButton [class^='country-name'] {
+    font-family: var(--venia-global-fontFamily-sansSerifRtl);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.buttonConfirm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.submit {
+    min-height: 2.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: var(--venia-black-color);
+    color: white;
+    text-transform: uppercase;
+    width: 45%;
+}
+
+.submitDisable {
+    min-height: 2.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: darkgray;
+    color: white;
+    text-transform: uppercase;
+    width: 45%;
+}
+
+.empty {
+    width: 10%;
+}
+
+.rowView {
+    display: flex;
+    flex-direction: row;
+}
+
+.rowTitle {
+    color: var(--venia-black-color);
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.rowValue {
+    color: var(--venia-black-color);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--venia-black-color);
+}
+
+/* FORM */
+.form {
+    display: grid;
+    grid-gap: 5px;
+}
+
+.form label {
+    margin-bottom: 5px;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 0;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Other Address */
+.otherAddress {
+    border: 1px solid black;
+    border-radius: 0;
+}
+
+.addressList {
+    display: grid;
+    grid-gap: 15px;
+    transition: all .3s ease-in-out;
+    background-color: white;
+}
+
+.addressList:hover {
+    background-color: rgba(0, 0, 0, .03);
+}
+
+.addressList li {
+    display: grid;
+    grid-template-columns: 50px auto;
+    cursor: pointer;
+    padding: 15px;
+    transition: all .3s ease-in-out;
+}
+
+.addressList li:hover {
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+        0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+        0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+    background-color: white;
+}
+
+.addressList .actived {
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+        0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+        0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+    background-color: white;
+}
+
+.addressList .defaultAddress {
+    font-size: 10px;
+}
+
+.addressList li p {
+    margin-bottom: .5rem;
+}
+
+.inValidInfo {
+    border: 1px solid #c5010e
+}
+
+/* Mobile */
+.rootMobile {
+    gap: 18px;
+}
+
+.rootMobile .info {
+    padding: 15px;
+}

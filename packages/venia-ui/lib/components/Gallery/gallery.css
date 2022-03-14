@@ -1,0 +1,43 @@
+.rootMobile,
+.rootTablet,
+.root {
+    display: grid;
+    grid-template-areas:
+        'actions'
+        'items';
+    grid-template-columns: 1fr;
+    line-height: 1;
+}
+
+.items {
+    display: grid;
+    grid-area: items;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Mobile */
+.rootMobile .items {
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Tablet */
+.rootTablet .items {
+    grid-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1350px) {
+    .items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 350px) {
+    .items {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}

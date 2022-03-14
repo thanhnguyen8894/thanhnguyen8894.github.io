@@ -1,0 +1,247 @@
+.rootMobile,
+.root {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 610px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--venia-black-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subHeading {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--venia-black-color);
+    text-align: center;
+}
+
+.titleRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.itemTitle {
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--venia-black-color);
+    font-weight: 500;
+}
+
+.editBlock {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.editText {
+    font-size: 16px;
+    line-height: 19px;
+    color: #fe4a00;
+    padding-left: 5px;
+}
+
+.errorText {
+    color: rgb(var(--venia-global-color-error));
+    font-size: var(--venia-typography-body-S-fontSize);
+    font-weight: var(--venia-global-fontWeight-semibold);
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.textButton {
+    composes: content from '../Button/button.css';
+    font-size: 12px;
+}
+
+.group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+.containerButton {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.containerOTP {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+    grid-template-columns: 1fr 90px;
+    direction: ltr;
+}
+
+.containerEmail {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+    grid-template-columns: 1fr 90px;
+    direction: rtl;
+}
+
+.otpControl div:last-child input {
+    margin-right: 0 !important;
+}
+
+.submitButton {
+    composes: root_highPriority from '../Button/button.css';
+    min-width: unset;
+    max-width: 90px;
+    width: 90px;
+    padding: unset;
+}
+
+.busy {
+    cursor: not-allowed;
+}
+
+.countdown {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.phone {
+    width: calc(100vw - 30px) !important;
+    max-width: 290px !important;
+    border-color: #d9d9d9 !important;
+    border-radius: 0 !important;
+    height: 40px !important;
+    padding-left: 63px !important;
+    -webkit-appearance: none !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px !important;
+    color: var(--venia-black-color) !important;
+}
+
+.flagButton {
+    width: 53px !important;
+    background-color: #fff !important;
+    border-right-width: 0 !important;
+    border-color: #d9d9d9 !important;
+    padding-left: 10px !important;
+}
+
+.flagButton:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 1px;
+    height: 24px;
+    background-color: #cdcdcd;
+}
+
+.flagButton [class^='selected-flag'] {
+    width: 100% !important;
+    border-color: #cdcdcd !important;
+    background-color: unset !important;
+    margin-right: 6px;
+}
+
+.flagButton [class^=' country-list'] {
+    width: calc(100vw - 40px);
+    max-width: 350px;
+}
+
+.flagButton [class^='flag'] {
+    transform: scale(1.7) !important;
+}
+
+.flagButton [class^='dial-code'] {
+    margin-right: 10px;
+}
+
+.flagButton [class^='arrow'] {
+    display: none;
+}
+
+.flagButton [class^='country-name'] {
+    font-family: var(--venia-global-fontFamily-sansSerifRtl);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profileContentLeft {
+    display: flex;
+    flex-direction: row;
+}
+
+.walletTitle {
+    color: var(--venia-black-color);
+    flex-direction: row;
+    display: flex;
+}
+
+.walletValue {
+    font-weight: bold;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.textLink {
+    margin-top: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dobBlock {
+    position: relative;
+}
+
+.inputDob {
+    composes: input from '../Field/field.css';
+    opacity: 1;
+}
+
+.inputDob:disabled {
+    -webkit-opacity: 1;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+}
+/* Mobile */
+.rootMobile {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.rootMobile .main {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rootMobile .group {
+    grid-template-columns: auto;
+}
+
+.rootMobile .phone {
+    width: 100% !important;
+    height: 40px !important;
+    max-width: unset !important;
+}
+
+.rootMobile .flagButton:before {
+    top: 9px;
+}

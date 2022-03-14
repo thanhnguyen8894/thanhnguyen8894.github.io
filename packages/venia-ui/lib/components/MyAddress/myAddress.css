@@ -1,0 +1,82 @@
+.rootTablet,
+.rootMobile,
+.root {
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--venia-black-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subTitle {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--venia-black-color);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.contentAddress {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.addNewAddress {
+    border: 1px solid var(--venia-black-color);
+    width: 290px;
+    max-width: 290px;
+    min-height: 229px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addImg {
+    width: 24px;
+    height: 24px;
+}
+
+.addImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.addText {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--venia-black-color);
+    padding-top: 15px;
+}
+
+/* Tablet */
+.rootTablet .contentAddress {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Mobile */
+.rootMobile {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.rootMobile .contentAddress {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 1025px) and (max-width: 1360px) {
+    .contentAddress {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}

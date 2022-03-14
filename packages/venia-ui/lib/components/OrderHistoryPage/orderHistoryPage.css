@@ -1,0 +1,63 @@
+.root {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--venia-black-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subTitle {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--venia-black-color);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.checkAll {
+    font-size: 16px;
+    line-height: 22px;
+    color: #FE4A00;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 960px) {
+    .root {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .filterRow {
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .search {
+        gap: 0.5rem;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+.rootMobile {
+    padding: 50px 0;
+}
+
+.rootMobile .orderHistoryTable {
+    width: 100%;
+}

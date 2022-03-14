@@ -1,0 +1,30 @@
+.heading {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16.9px;
+    color: var(--venia-black-color);
+}
+
+.link {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.link:hover,
+.link:focus,
+.linkActive {
+    text-decoration: underline;
+}
+
+.submenuChild {
+    margin-top: 15px;
+}
+
+.submenuChildItem {
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--venia-black-color);
+}

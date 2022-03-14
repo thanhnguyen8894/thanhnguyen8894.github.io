@@ -1,0 +1,46 @@
+.card {
+    height: 200px;
+    border-bottom: 1px solid #c2c2c2;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px 10px;
+    align-items: end;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.item_header {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 19.2px;
+    color: var(--venia-black-color);
+}
+
+.rowView {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.labelView {
+    color: var(--venia-black-color);
+    font-weight: 700;
+    font-size: 16px;
+    flex: 4;
+    display: flex;
+}
+
+.valueView {
+    color: var(--venia-black-color);
+    font-weight: 400;
+    font-size: 16px;
+    flex: 6;
+    display: flex;
+}

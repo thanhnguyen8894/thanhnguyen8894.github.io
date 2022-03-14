@@ -1,0 +1,124 @@
+.root {
+    max-height: 820px;
+    min-height: 400px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #c1c1c1;
+    font-weight: 300;
+    padding-bottom: 10px;
+    font-size: 26px;
+}
+
+.titleModal {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--venia-black-color);
+}
+
+.closeButton {
+    height: 24px;
+    width: 24px;
+    margin-inline-start: 20px;
+    font-family: var(--venia-global-fontFamily-sansSerif) !important;
+}
+
+.imageStyle {
+    object-fit: contain;
+}
+
+.noFreeGifts {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--venia-black-color);
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerImage {
+    composes: container from '../../Image/image.css';
+    height: auto;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    height: 40px;
+    max-width: 200px;
+    text-align: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.oldPrice {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--venia-black-color);
+    text-decoration: line-through;
+}
+
+.discountPrice {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #e92728;
+    padding-bottom: 10px;
+}
+
+.errorMessage {
+    color: rgb(var(--venia-global-color-error));
+    font-size: var(--venia-typography-body-S-fontSize);
+    font-weight: var(--venia-global-fontWeight-semibold);
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+/* Tablet */
+.rootTablet .container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Mobile */
+.rootMobile {
+    max-height: 100vh;
+}
+
+.rootMobile .heading {
+    padding-top: 10px;
+}
+
+.rootMobile .container {
+    margin-top: 30px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 350px) {
+    .container {
+        grid-template-columns: 1fr !important;
+    }
+}

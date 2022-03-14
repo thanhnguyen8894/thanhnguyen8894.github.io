@@ -1,0 +1,259 @@
+.root {
+    position: relative;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.root:hover,
+.rootMobile:hover,
+.rootTablet:hover {
+    box-shadow: 
+        rgb(0 0 0 / 7%) 0px 5px 6px, 
+        rgb(0 0 0 / 12%) 0px 8px 5px, 
+        rgb(0 0 0 / 4%) 0px 4px 7px, 
+        rgb(0 0 0 / 0%) 0px 5px 0px, 
+        rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+
+.root:hover .actions,
+.rootMobile:hover .actions,
+.rootTablet:hover .actions {
+    visibility: visible;
+}
+
+.root:hover .wishlistArea,
+.rootMobile:hover .wishlistArea,
+.rootTablet:hover .wishlistArea {
+    display: block;
+}
+
+.images {
+    position: relative;
+    display: grid;
+    grid-template-areas: 'main';
+    margin-bottom: 0.65rem;
+}
+
+.imageContainer {
+    grid-area: main;
+}
+
+.image {
+    display: block;
+    opacity: 1;
+    transition-duration: 512ms;
+    transition-property: opacity, visibility;
+    transition-timing-function: ease-out;
+    visibility: visible;
+    object-fit: contain;
+    height: 300px;
+}
+
+.imagePlaceholder {
+    composes: image;
+    background-color: rgb(var(--venia-global-color-gray));
+}
+
+.wishlistArea {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 12px;
+    display: none;
+}
+
+.nameProduct {
+    display: block;
+    padding: 8px 0 15px;
+    text-align: center;
+}
+
+.nameProduct .name {
+    color: var(--venia-black-color);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    min-height: 40px;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.priceProduct {
+    display: flex;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.price,
+.oldPrice,
+.specialPrice {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.priceProduct .specialPrice {
+    color: #C5010E;
+}
+
+.priceProduct .oldPrice {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration-line: line-through;
+    padding-inline-end: 6px;
+}
+
+.starProduct {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 24px;
+    min-height: 48px;
+}
+
+.actions {
+    text-align: center;
+    visibility: hidden;
+}
+
+.addToCart {
+    width: 140px;
+    height: 30px;
+    border: 1px solid var(--venia-black-color);
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.outOfStock {
+    composes: addToCart;
+}
+
+/* state: pending */
+
+.root_pending {
+    composes: root;
+}
+
+.image_pending {
+    composes: image;
+    background-color: rgb(var(--venia-global-color-gray));
+}
+
+.images_pending {
+    composes: images;
+}
+
+.name_pending {
+    composes: name;
+    background-color: rgb(var(--venia-global-color-gray));
+}
+
+.price_pending {
+    composes: price;
+    background-color: rgb(var(--venia-global-color-gray));
+    width: 3rem;
+}
+
+/* tablet */
+.rootTablet {
+    max-width: 218px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.rootTablet .image {
+    height: 218px;
+}
+
+.rootTablet .nameProduct .name {
+    font-size: 14px;
+    line-height: 16.8px;
+    min-height: 34px;
+}
+
+.rootTablet .starProduct {
+    padding-bottom: 18.33px;
+    min-height: 43px;
+}
+
+.rootTablet .priceProduct {
+    padding-bottom: 14px;
+}
+
+.rootTablet .actions .addToCart {
+    width: 120px;
+}
+
+/* Mobile */
+.rootMobile {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.rootMobile .image {
+    height: 150px;
+}
+
+.rootMobile .nameProduct {
+    padding: 10px 0;
+}
+
+.rootMobile .nameProduct .name {
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 36px;
+}
+
+.rootMobile .priceProduct {
+    padding-bottom: 14px;
+}
+
+.rootMobile .starProduct {
+    padding-bottom: 15px;
+    min-height: 39px;
+}
+
+.rootMobile .addToCart {
+    width: 120px;
+}
+
+/* Sub Desktop */
+.rootSubDes {
+    composes: root;
+    max-width: 210px;
+}
+
+.rootSubDes .image {
+    height: 210px;
+}
+
+.rootSubDes .nameProduct .name {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.rootSubDes .priceProduct {
+    padding-bottom: 14px;
+}
+
+.rootSubDes .starProduct {
+    padding-bottom: 19px;
+    min-height: 43px;
+}

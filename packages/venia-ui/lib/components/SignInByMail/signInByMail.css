@@ -1,0 +1,128 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    column-gap: 255px;
+    padding-top: 120px;
+}
+
+.form {
+    display: grid;
+    max-width: 345px;
+    gap: 30px;
+    justify-items: stretch;
+}
+
+.container {
+    max-width: 345px;
+    display: grid;
+    gap: 30px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 30.8px;
+    color: var(--venia-black-color);
+    margin-bottom: 22px;
+}
+
+.subTitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.4px;
+    color: var(--venia-black-color);
+}
+
+.line {
+    width: 1px;
+    opacity: 0.5;
+    border-color: #e5e5e5;
+}
+
+.submitButton {
+    composes: root_highPriority from '../Button/button.css';
+    height: 40px;
+    width: calc(100vw - 30px);
+    max-width: 350px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+}
+
+.formSignUp {
+    display: grid;
+    justify-items: flex-end;
+}
+
+/* Table */
+.rootTablet {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.rootTablet .redirectSignUp,
+.rootTablet .formSignUp,
+.rootTablet .redirectSignUp,
+.rootTablet .container {
+    max-width: 600px;
+}
+
+.rootTablet .line,
+.rootTablet .submitButton {
+    max-width: 600px;
+}
+
+.rootTablet .formSignUp {
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.rootTablet .redirectSignUp {
+    margin: 0 auto;
+}
+
+.rootTablet .line {
+    height: 1px;
+    margin: 30px auto;
+}
+
+/* Mobile */
+.rootMobile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.rootMobile .redirectSignUp {
+    margin: 0 auto;
+    max-width: 345px;
+}
+
+.rootMobile .formSignUp {
+    margin: 0 auto;
+    max-width: 345px;
+    justify-items: center;
+}
+
+.rootMobile .line {
+    width: 300px;
+    height: 1px;
+    margin: 30px auto;
+}
+
+.rootMobile .submitButton {
+    height: 40px;
+}
+
+@media (min-width: 1024px) {
+    .root {
+        column-gap: 150px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .root {
+        column-gap: 255px;
+    }
+}

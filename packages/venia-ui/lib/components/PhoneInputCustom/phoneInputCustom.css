@@ -1,0 +1,94 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    direction: ltr !important;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    height: 40px;
+}
+
+.control {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    border: 1px solid #cdcdcd;
+    transition: all 0.3s;
+    max-height: 40px;
+    max-width: '100%';
+}
+
+.control:hover,
+.controlFocus {
+    border-color: #aaa;
+}
+
+.controlValid {
+    border-color: #CACACA !important;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 38px;
+    transition: all 0.3s;
+}
+
+.radioButton {
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.radioButton>img {
+    border: 1px solid rgb(226, 229, 241);
+}
+
+.input {
+    display: flex;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    padding-inline-start: 10px;
+    /* height: 40px; */
+    font-size: 14px;
+    background-color: transparent;
+    color: black !important;
+    width: 100%;
+}
+
+.inputMobile {
+    display: flex;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    padding-inline-start: 10px;
+    /* padding-top: 5px; */
+    padding-bottom: 2px;
+    height: 40px;
+    font-size: 14px;
+    background-color: transparent;
+    color: black !important;
+}
+
+.input::-webkit-input-placeholder {
+    color: #cdcdcd;
+    font-size: 14px;
+}
+
+.inputMobile::-webkit-input-placeholder {
+    color: #cdcdcd;
+    font-size: 14px;
+}

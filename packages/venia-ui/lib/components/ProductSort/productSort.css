@@ -1,0 +1,57 @@
+.rootMobile,
+.root {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    z-index: 3;
+    top: 110%;
+    right: 0;
+    min-width: 10rem;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: black;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgb(var(--venia-global-color-gray-dark));
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.menuItem {
+    border-bottom: 1px solid rgb(var(--venia-global-color-gray-dark));
+}
+
+.menuItem:last-child {
+    border-bottom: none;
+}
+
+.menuItem:hover {
+    background-color: rgb(var(--venia-global-color-gray));
+}
+
+.sortButton {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: var(--venia-black-color);
+    height: 40px;
+    width: 160px;
+    padding: 0 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sortButton .arrowDropdown{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.contentButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+}

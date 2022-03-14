@@ -1,0 +1,19 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    width: 100%;
+    padding: 0 15px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    background-color: var(--venia-white-color);
+    border-top: 1px solid var(--venia-gray-light-color-100);
+    border-bottom: 1px solid var(--venia-gray-light-color-100);
+}
+
+@media (max-width: 960px) {
+    .root {
+        padding: 0 30px;
+    }
+}

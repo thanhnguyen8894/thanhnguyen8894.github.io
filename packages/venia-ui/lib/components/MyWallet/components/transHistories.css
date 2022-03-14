@@ -1,0 +1,46 @@
+.root {
+    display: grid;
+    overflow-x: scroll;
+}
+
+.header {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 150px 350px 150px 150px 150px 150px;
+    padding: 20px;
+}
+
+.headerWithdraw {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 100px 250px 100px 350px 150px 150px;
+    padding: 20px;
+}
+
+.headerTitle {
+    font-weight: bold;
+}
+
+@media (max-width: 960px) {
+    .root {
+        display: grid;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .headerWithdraw {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px;
+    }
+}

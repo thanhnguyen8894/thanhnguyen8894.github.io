@@ -1,0 +1,19 @@
+.root {
+    display: grid;
+    grid-template-columns: var(--venia-global-sideMenuWidth) calc(100% - var(--venia-global-sideMenuWidth));
+}
+
+.contentAccount {
+    min-height: 48rem;
+    background-color: var(--venia-white-color);
+}
+
+/* Mobile */
+.rootMobile {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.privateMenuMobile {
+    display: none;
+}

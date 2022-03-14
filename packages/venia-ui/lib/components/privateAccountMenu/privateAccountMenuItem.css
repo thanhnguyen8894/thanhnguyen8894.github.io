@@ -1,0 +1,40 @@
+.root {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.active {
+    border-inline-start: 3px solid #FE4A00;
+}
+
+.rootHasEmail {
+    align-items: flex-start;
+}
+
+.image {
+    padding-inline-start: 40px;
+}
+
+.text {
+    padding-inline-start: 18.23px;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--venia-black-color);
+}
+
+.email {
+    color: #929292;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 260px;
+}
+
+.icon {}
+
+@media (max-width: 960px) {
+    .email {
+        width: 75vw;
+    }
+}

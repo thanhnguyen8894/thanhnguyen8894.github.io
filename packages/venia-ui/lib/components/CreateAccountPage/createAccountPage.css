@@ -1,0 +1,133 @@
+.root {
+    display: grid;
+    column-gap: 177px;
+    grid-template-columns: 1fr min-content 1fr;
+    padding-top: 120px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 39px;
+    color: var(--venia-black-color);
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    max-width: 384px;
+    gap: 30px;
+}
+
+.subTitle {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: var(--venia-black-color);
+}
+
+.line {
+    width: 1px;
+    opacity: 0.5;
+    border-color: #E5E5E5;
+    margin: 50px 0;
+}
+
+.submitButton {
+    composes: root_highPriority from '../Button/button.css';
+    height: 40px;
+    width: calc(100vw - 30px);
+    max-width: 385px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+}
+
+.textContinue {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13.2px;
+    color: var(--venia-black-color);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.formSignUp {
+    display: flex;
+    justify-content: flex-end;
+    margin-inline-end: 50px;
+}
+
+/* Mobile */
+.rootMobile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.rootMobile .redirectSignIn {
+    /* max-width: 345px; */
+    margin: 0 auto;
+}
+
+.rootMobile .formSignUp {
+    /* max-width: 345px; */
+    margin: 0 auto;
+}
+
+.rootMobile .line {
+    width: 300px;
+    height: 1px;
+    margin: 30px auto;
+}
+
+.rootMobile .submitButton {
+    height: 40px;
+    /* max-width: 350px; */
+}
+
+
+/* Tablet */
+.rootTablet {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.rootTablet .redirectSignIn {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rootTablet .formSignUp {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rootTablet .container {
+    max-width: 600px;
+}
+
+.rootTablet .line {
+    width: 600px;
+    height: 1px;
+    margin: 30px auto;
+}
+
+.rootTablet .submitButton {
+    max-width: 600px;
+    height: 40px;
+}
+
+@media (min-width: 1024px) {
+    .root {
+        column-gap: 100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .root {
+        column-gap: 177px;
+    }
+}

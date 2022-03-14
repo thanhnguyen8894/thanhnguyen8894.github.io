@@ -1,0 +1,113 @@
+.root {
+    align-items: center;
+    display: grid;
+    /* The full height of the site header minus (box shadow height * 2). */
+    height: calc(5rem - 8px);
+}
+
+.root_open {
+    composes: root;
+    box-shadow: 0 4px rgb(var(--venia-brand-color-1-700));
+}
+
+.trigger {
+    composes: root from '../clickable.css';
+    height: 3rem;
+    z-index: 1;
+}
+
+.link {
+    composes: root from '../clickable.css';
+    display: flex;
+}
+
+.accountImage {
+    width: 16.77px;
+    height: 18px;
+}
+
+
+.modal {
+    background-color: white;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    transform: translate3d(100%, 0, 0);
+    transition-duration: 192ms;
+    transition-timing-function: var(--venia-anim-out);
+    transition-property: opacity, transform, visibility;
+    visibility: hidden;
+    width: 100%;
+    z-index: 3;
+}
+
+.modalRtl {
+    composes: modal;
+    left: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.modal_open {
+    composes: modal;
+    box-shadow: 1px 0 rgb(var(--venia-border));
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-duration: 224ms;
+    transition-timing-function: var(--venia-anim-in);
+    visibility: visible;
+}
+
+.modal_open_rtl {
+    composes: modalRtl;
+    box-shadow: 1px 0 rgb(var(--venia-border));
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-duration: 224ms;
+    transition-timing-function: var(--venia-anim-in);
+    visibility: visible;
+}
+
+.body {
+    border-bottom: 1px solid rgb(var(--venia-border));
+    overflow: auto;
+}
+
+.header {
+    display: flex;
+    min-height: 56px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    box-shadow: 0px 4px 7px rgb(0 0 0 / 5%);
+    margin-bottom: 30px;
+}
+
+.headerTitle {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #202020;
+}
+
+.buttonClose svg {
+    width: 18px;
+    height: 18px;
+}
+
+.buttonClose div {
+    max-height: 18px;
+}
+
+@media (min-width: 961px) {
+    .modal {
+        max-width: 376px;
+    }
+}

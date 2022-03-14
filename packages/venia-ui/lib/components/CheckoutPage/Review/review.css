@@ -1,0 +1,247 @@
+.root {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    height: max-content;
+    background-color: #f8f8f8;
+    padding: 30px;
+    position: relative;
+    max-width: 488px;
+    margin: 0 auto;
+}
+
+.title {
+    color: var(--venia-black-color);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23.4px;
+}
+
+.lineItems {
+    display: grid;
+    grid-row-gap: 0.75rem;
+    grid-template-columns: max-content auto;
+    line-height: 1.5rem;
+}
+
+.linesItemsBold {}
+
+.lineItemLabel {
+    color: var(--venia-black-color);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.price {
+    color: var(--venia-black-color);
+    font-size: 16px;
+    line-height: 20.8px;
+    justify-self: end;
+    font-weight: 300;
+}
+
+.linesItemsBold .price,
+.linesItemsBold .lineItemLabel {
+    font-weight: 500;
+}
+
+.priceDiscount {
+    composes: price;
+    display: flex;
+}
+
+.divider {
+    height: 1px;
+    background-color: #c4c4c4;
+    margin: 10px 0;
+}
+
+.item {
+    display: grid;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--venia-black-color);
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+}
+
+.itemTitle {
+    align-items: center;
+    height: 20px;
+    display: flex;
+    width: 60%;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19.5px;
+    color: var(--venia-black-color);
+}
+
+.itemExpanded {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    color: var(--venia-black-color);
+    margin: 0 13px;
+    margin-inline-start: auto;
+}
+
+.myAddress {
+    color: var(--venia-black-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.form {
+    display: grid;
+    gap: 20px;
+}
+
+.placeOrderButton {
+    width: -webkit-fill-available;
+    height: 48px;
+    background-color: var(--venia-brown-color);
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 400;
+}
+
+.placeOrderButtonDisable {
+    composes: placeOrderButton;
+    width: -webkit-fill-available;
+    background-color: darkgray;
+}
+
+.submit {
+    min-height: 2.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 0px;
+    border-radius: 0rem;
+    background-color: var(--venia-black-color);
+    color: white;
+    text-transform: uppercase;
+    max-width: 20%;
+}
+
+.discount {
+    display: grid;
+    gap: 16px;
+    margin: 12px 0;
+}
+
+.button {
+    min-height: unset;
+    min-width: unset;
+    height: 40px;
+    width: 20%;
+    background-color: var(--venia-brown-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    border: none;
+}
+
+.walletLabel {
+    color: var(--venia-black-color);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.button:disabled {
+    background-color: darkgray;
+}
+
+.textRewardPoint {
+    margin-top: 10px;
+}
+
+.couponEntryForm {
+    composes: entryForm from '~@magento/venia-ui/lib/components/CartPage/PriceAdjustments/CouponCode/couponCode.css';
+    margin-bottom: 10px;
+}
+
+.couponEntryForm input {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--venia-black-color);
+    width: 100%;
+    height: 40px;
+}
+
+.couponEntryForm::-webkit-input-placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    color: #CDCDCD;
+}
+
+@media (max-width: 1145px) {
+    .root {
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .lineItemLabel {
+        font-size: 14px;
+    }
+
+    .discount {
+        gap: 20px;
+    }
+
+    .itemTitle {
+        width: 70%;
+        max-width: 205px;
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+}
+
+/* CSS mobile */
+.rootMobile {
+    display: grid;
+    gap: 15px;
+    width: 100%;
+    height: max-content;
+    background-color: #f8f8f8;
+    padding: 20px 20px 30px 20px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.rootMobile .title {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.rootMobile .divider {
+    margin: 0;
+}
+
+.rootMobile .nameCart {
+    margin: 5px 0;
+}
+
+.rootMobile .discount {
+    margin: 6px 0 18px 0;
+}
+
+@media (max-width: 1024px) {
+    .root {
+        max-width: 100%;
+    }
+}

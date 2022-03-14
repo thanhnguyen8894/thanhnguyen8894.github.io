@@ -1,0 +1,293 @@
+.container {
+    max-width: var(--venia-global-maxWidth);
+    position: relative;
+}
+
+.root {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 560px;
+    padding: 170px 0;
+    direction: ltr !important;
+}
+
+.verify {
+    max-height: 600px;
+}
+
+.header {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 39px;
+    color: var(--venia-black-color);
+    margin-bottom: 10px;
+}
+
+.subTitle {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: var(--venia-black-color);
+}
+
+.errorText {
+    color: rgb(var(--venia-global-color-error));
+    font-size: var(--venia-typography-body-S-fontSize);
+    font-weight: var(--venia-global-fontWeight-semibold);
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.footer {
+    display: grid;
+    /* grid-template-columns: max-content max-content; */
+    gap: 30px;
+    justify-content: center;
+}
+
+.textLink {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.textLink:hover {
+    cursor: pointer;
+}
+
+.footerVerify {}
+
+.phone {
+    width: calc(100vw - 30px) !important;
+    max-width: 384px !important;
+    border-color: #d9d9d9 !important;
+    border-radius: 0 !important;
+    height: 40px !important;
+    padding-left: 63px !important;
+    -webkit-appearance: none !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px !important;
+    color: var(--venia-black-color) !important;
+}
+
+.flagButton {
+    width: 53px !important;
+    background-color: #fff !important;
+    border-right-width: 0 !important;
+    border-color: #d9d9d9 !important;
+    padding-left: 10px !important;
+}
+
+.flagButton:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 1px;
+    height: 24px;
+    background-color: #cdcdcd;
+}
+
+.flagButton [class^='selected-flag'] {
+    width: 100% !important;
+    border-color: #cdcdcd !important;
+    background-color: unset !important;
+    margin-right: 6px;
+}
+
+.flagButton [class^=' country-list'] {
+    width: calc(100vw - 40px);
+    max-width: 350px;
+}
+
+.flagButton [class^='flag'] {
+    transform: scale(1.7) !important;
+}
+
+.flagButton [class^='dial-code'] {
+    margin-right: 10px;
+}
+
+.flagButton [class^='arrow'] {
+    display: none;
+}
+
+.flagButton [class^='country-name'] {
+    font-family: var(--venia-global-fontFamily-sansSerifRtl);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.formAccount {
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    gap: 30px;
+    min-width: 384px;
+}
+
+.submit {
+    composes: root_highPriority from '../Button/button.css';
+    height: 40px;
+    width: calc(100vw - 30px);
+    max-width: 384px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+}
+
+.loginByEmail {
+    composes: submit;
+    margin-top: 10px;
+}
+
+.action {
+    display: grid;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+
+.actions .submit {
+    width: 100%;
+}
+
+.actions .backButton {
+    background-color: var(--venia-brown-color);
+    border: 0;
+    min-width: auto;
+}
+
+.footerForm {
+    display: flex;
+}
+
+.footerForm .formAccount {
+    grid-template-columns: auto;
+}
+
+.countdown {
+    display: grid;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 22px;
+    grid-template-columns: repeat(4, auto);
+}
+
+.modal {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(var(--venia-global-color-gray));
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.modal_active {
+    visibility: visible;
+    composes: modal;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+.formAccountByEmail {
+    display: grid;
+    gap: 20px;
+}
+
+.errorError {
+    max-width: 384px;
+}
+
+.forgotLink {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.errorText {
+    max-width: 384px;
+    color: rgb(var(--venia-global-color-error));
+    font-size: var(--venia-typography-body-S-fontSize);
+    font-weight: var(--venia-global-fontWeight-semibold);
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+/* CSS Tablet */
+
+.rootTablet {
+    padding: 70px 0;
+    gap: 20px;
+}
+
+.rootTablet .header {
+    gap: 10px;
+}
+
+/* CSS Mobile */
+
+.rootMobile {
+    gap: 15px;
+    padding: 70px 0;
+}
+
+.rootMobile .errorError {
+    width: calc(100vw - 30px);
+}
+
+.rootMobile .header {
+    display: grid;
+    gap: 10px;
+}
+
+.rootMobile .title {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.rootMobile .subTitle {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0em;
+    max-width: 343px;
+}
+
+.rootMobile .formAccount {
+    grid-template-columns: auto;
+    min-width: unset;
+}
+
+.rootMobile .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 110px;
+    margin: 0 auto;
+}
+
+.rootMobile .phone {
+    width: 100% !important;
+    height: 40px !important;
+}
+
+.rootMobile .countdown {
+    gap: 20px;
+}
+
+.rootMobile .flagButton:before {
+    top: 9px;
+}

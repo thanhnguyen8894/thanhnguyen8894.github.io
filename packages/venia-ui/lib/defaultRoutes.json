@@ -1,0 +1,127 @@
+[{
+        "name": "AccountInformationPage",
+        "pattern": "/account-information",
+        "exact": true,
+        "path": "../AccountInformationPage"
+    },
+    {
+        "name": "Cart",
+        "pattern": "/cart",
+        "exact": true,
+        "path": "../CartPage"
+    },
+    {
+        "name": "CheckoutPage",
+        "pattern": "/checkout",
+        "exact": true,
+        "path": "../CheckoutPage"
+    },
+    {
+        "name": "ConfirmPayment",
+        "pattern": "/checkout/confirm-payment",
+        "exact": true,
+        "path": "../CheckoutPage/ConfirmPayment"
+    },
+    {
+        "name": "CheckoutRegistrationPage",
+        "pattern": "/checkout/registration",
+        "exact": true,
+        "path": "../CheckoutRegistrationPage"
+    },
+    {
+        "name": "VerificationPage",
+        "pattern": "/verification",
+        "exact": true,
+        "path": "../VerificationPage"
+    },
+    {
+        "name": "CommunicationsPage",
+        "pattern": "/communications",
+        "exact": true,
+        "path": "../CommunicationsPage"
+    },
+    {
+        "name": "CreateAccountPage",
+        "pattern": "/create-account",
+        "exact": true,
+        "path": "../CreateAccountPage"
+    },
+    {
+        "name": "SignInPage",
+        "pattern": "/login",
+        "exact": true,
+        "path": "../SignInPage"
+    },
+    {
+        "name": "Reset Password",
+        "pattern": "/customer/account/createPassword",
+        "exact": true,
+        "path": "../MyAccount/ResetPassword"
+    },
+    {
+        "name": "SavedPayments",
+        "pattern": "/saved-payments",
+        "exact": true,
+        "path": "../SavedPaymentsPage"
+    },
+    {
+        "name": "Search",
+        "pattern": "/search.html",
+        "exact": true,
+        "path": "../../RootComponents/Search"
+    },
+    {
+        "name": "ProductList",
+        "pattern": "/products/:id?",
+        "exact": true,
+        "path": "../ProductList"
+    },
+    {
+        "name": "StoreList",
+        "pattern": "/stores",
+        "exact": true,
+        "path": "../StoreList"
+    },
+    {
+        "name": "Contact Us",
+        "pattern": "/contact-us",
+        "exact": true,
+        "path": "../ContactPage"
+    },
+    {
+        "name": "SignInByEmail",
+        "pattern": "/login-by-email",
+        "exact": true,
+        "path": "../SignInByMail"
+    },
+    {
+        "name": "UpdateUserPhone",
+        "pattern": "/update-user-phone",
+        "exact": true,
+        "path": "../UpdateUserPhone"
+    },
+    {
+        "name": "ForgotPassword",
+        "pattern": "/forgot-password",
+        "exact": true,
+        "path": "../ForgotPassword"
+    },
+    {
+        "name": "HyperPay",
+        "pattern": "/checkout/:checkoutId/hyperpay/:brandName/:orderNumber",
+        "exact": true,
+        "path": "../CheckoutPage/HyperPay"
+    },
+    {
+        "name": "Download",
+        "pattern": "/download",
+        "exact": true,
+        "path": "../Download"
+    },
+    {
+        "name": "CreateAccountByEmailPage",
+        "pattern": "/create-account-by-email",
+        "exact": true,
+        "path": "../CreateAccountByEmailPage"
+    }
+]

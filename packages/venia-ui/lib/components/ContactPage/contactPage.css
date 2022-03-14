@@ -1,0 +1,129 @@
+.root {
+    padding: 1.5rem 1.5rem;
+    width: 50%;
+}
+
+.rootContainer {
+    display: grid;
+}
+
+.fontRtl {
+    font-family: var(--venia-global-fontFamily-sansSerifRtl);
+}
+
+.heading {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.registeredCustomerContent {
+    padding-bottom: 1rem;
+}
+
+.rootContent {
+    display: grid;
+    width: 100%;
+}
+
+.field {
+    grid-column-end: span 2;
+    margin-top: 5px;
+}
+
+.label {
+    font-weight: 100;
+}
+
+.email,
+.password,
+.confirmpassword,
+.mobile,
+.note {
+    composes: field;
+}
+
+.firstname,
+.lastname {
+    grid-column-end: span 1;
+}
+
+.buttons {
+    composes: field;
+    display: grid;
+    grid-auto-flow: column;
+    justify-self: center;
+    padding-bottom: 1rem;
+    grid-template-columns: 1fr 3fr;
+}
+
+.buttonsNewCus {
+    composes: field;
+    display: grid;
+    grid-auto-flow: column;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.submitButton {
+    composes: root_normalPriority from '../Button/button.css';
+    font-size: 16px;
+    font-weight: 600;
+    background: #353535;
+    border: 1px solid #353535;
+    color: white;
+    text-transform: uppercase;
+    width: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 3px;
+    min-height: 50px;
+    max-width: 150px;
+}
+
+.submitButton:hover {
+    color: white;
+}
+
+.submitButton:disabled {
+    background: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    color: var(--venia-white-color);
+}
+
+.forgetPass {
+    composes: filled from '../Button/button.css';
+    background-color: white;
+    color: #666;
+}
+
+.requiredText {
+    font-size: 0.7rem;
+    color: #e02b27;
+    text-align: right;
+    padding-bottom: 1.5rem;
+}
+
+.infoCallUs {
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    grid-template-columns: 0fr 1fr;
+    gap: 10px;
+    padding-top: 1rem;
+}
+
+.title {
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.textRequired {
+    margin-top: 5px;
+    color: #e02b27
+}
+
+@media (max-width: 1024px) {
+    .root {
+        width: auto;
+    }
+}

@@ -1,0 +1,214 @@
+.root {
+    position: relative;
+    display: block;
+    touch-action: pan-y;
+    user-select: none;
+    overflow: hidden;
+    --leftViewportElement: -99999px;
+    height: 600px;
+}
+
+.root :global .slick-current {
+    --leftViewportElement: 0;
+}
+
+.classRootSection {
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    bottom: 87px;
+    height: 250px;
+    width: 720px;
+    padding-inline-start: 62px;
+    background: linear-gradient(
+        101.63deg,
+        #cd2773 46.22%,
+        rgba(205, 39, 115, 0) 102.71%
+    );
+    color: white;
+}
+
+.content__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.root :global .slick-slide img {
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+    height: 600px;
+}
+
+.root :global .slick-current {
+    z-index: 1;
+}
+
+.actionSlider {
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    z-index: 1;
+    left: 0;
+    text-align: center;
+}
+
+.nextSlider,
+.preSlider {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin: 0;
+}
+
+.preSlider {
+    margin-inline-end: 10px;
+}
+
+.nextSlider::before,
+.preSlider::before {
+    position: absolute;
+    display: block;
+    box-shadow: none;
+    content: '';
+    text-indent: -99999px;
+    transition: 0.5s;
+    padding: 0;
+    width: 0;
+    height: 0;
+    filter: brightness(100%);
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid white;
+    left: 11px;
+    top: 7px;
+}
+
+.preSlider::before {
+    transform: rotate(180deg);
+    left: 10px;
+}
+
+.chevron {
+    composes: root from '../Icon/icon.css';
+    align-self: center;
+    border: 2px solid transparent;
+}
+
+.previousButton,
+.nextButton {
+    outline: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+}
+
+.previousButton {
+    left: 0;
+}
+
+.nextButton {
+    right: 0;
+}
+
+.chevron svg {
+    stroke: #ffffff !important;
+}
+
+.nextSliderRtl {
+    composes: nextSlider;
+}
+
+.preSliderRtl {
+    composes: preSlider;
+}
+
+.preSliderRtl::before {
+    transform: rotate(0deg);
+    left: 11px;
+}
+
+.nextSliderRtl::before {
+    transform: rotate(180deg);
+    left: 9px;
+}
+
+/* Override Slider */
+
+.root :global .slick-slider {
+    position: relative;
+}
+
+.root :global .slick-slide {
+}
+
+.root :global .slick-list {
+}
+
+/* tablet */
+.rootTablet {
+    max-height: 600px;
+}
+
+.rootTablet :global .slick-slider {
+    max-height: 600px;
+}
+
+.rootTablet :global .slick-slide img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.rootTablet :global .slick-slide,
+.rootTablet :global .slick-list {
+    max-height: 600px;
+}
+
+.rootTablet .actionSlider {
+    bottom: 30px;
+}
+
+/* mobile */
+.rootMobile {
+    /* min-height: 550px;*/
+    height: auto;
+}
+
+.rootMobile :global .slick-slide img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+}
+
+.rootMobile .actionSlider {
+    bottom: 20px;
+}
+
+/* @media (min-width: 1025px) and (max-width: 1400px) {
+    .root {
+        height: calc(100vh - (280px));
+    }
+
+    .root :global .slick-slide img {
+        height: calc(100vh - (280px));
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1850px) {
+    .root {
+        height: calc(100vh - (280px));
+    }
+
+    .root :global .slick-slide img {
+        height: calc(100vh - (280px));
+    }
+} */

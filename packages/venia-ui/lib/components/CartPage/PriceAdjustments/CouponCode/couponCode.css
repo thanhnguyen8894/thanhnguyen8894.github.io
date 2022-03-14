@@ -1,0 +1,68 @@
+/* Styles for "add" view. */
+.entryForm,
+.entryFormError {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 50px;
+}
+
+.entryFormError input {
+    border-color: rgb(var(--venia-global-color-red-400));
+}
+
+.entryFormError input:focus {
+    border-color: rgb(var(--venia-global-color-gray-600));
+}
+
+.entryFormError p {
+    color: rgb(var(--venia-global-color-error));
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.errorContainer {
+    /* Duplicate the left/right/bottom padding on the accordion section */
+    padding-top: 1.5rem;
+    color: rgb(var(--venia-global-color-error));
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.button {
+    composes: root_normalPriority from '../../../Button/button.css';
+    min-height: unset;
+    min-width: unset;
+    height: 40px;
+    min-width: 150px;
+    width: 100%;
+    background-color: var(--venia-brown-color);
+    color: var(--venia-white-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    border: none;
+}
+
+.couponCodeInput,
+.couponCodeInput::-webkit-input-placeholder {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+/* Styles for "removal" view. */
+.removeButton {
+    composes: root from '../../../LinkButton/linkButton.css';
+    margin-left: 1rem;
+}
+
+/* Mobile */
+.rootMobile .entryFormError,
+.rootMobile .entryForm {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
+}
+
+.rootMobile .button {
+    display: flex;
+    height: 40px;
+    min-width: 100px;
+}

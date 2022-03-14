@@ -1,0 +1,32 @@
+.buttonSelect {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 6px #AAA;
+}
+
+.track {
+    height: 36px;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.trackChildren {
+    height: 6px;
+    width: 100%;
+    border-radius: 4px;
+    align-self: center;
+    background-color: #F77E2E;
+}
+
+.priceBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+} 

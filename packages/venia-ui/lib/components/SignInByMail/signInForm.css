@@ -1,0 +1,215 @@
+.form {
+    display: grid;
+    row-gap: 0.9375rem;
+}
+
+.modal {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(var(--venia-global-color-gray));
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.modal_active {
+    visibility: visible;
+    composes: modal;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+.container {
+    display: grid;
+    /* max-width: 345px; */
+    gap: 30px;
+}
+
+.buttonsContainer {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.submitButton {
+    composes: root_highPriority from '../Button/button.css';
+    height: 40px;
+    width: calc(100vw - 30px);
+    max-width: 384px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: space-between;
+}
+
+.actions .submitButton {
+    width: 100%;
+}
+
+.actions .backButton {
+    background-color: var(--venia-black-color);
+    border: 0;
+    width: 140px;
+    min-width: auto;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 39px;
+    color: var(--venia-black-color);
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.subTitle {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: var(--venia-black-color);
+}
+
+.checkboxLabel {
+    composes: label from '../Checkbox/checkbox.css';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.6px;
+}
+
+.checkboxRoot {
+    composes: root from '../Checkbox/checkbox.css';
+    justify-content: flex-start;
+}
+
+.errorText {
+    color: rgb(var(--venia-global-color-error));
+    font-size: var(--venia-typography-body-S-fontSize);
+    font-weight: var(--venia-global-fontWeight-semibold);
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.phone {
+    width: 100% !important;
+    border-color: var(--venia-black-color) !important;
+    border-radius: 0 !important;
+    height: 50px !important;
+    padding-left: 80px !important;
+    -webkit-appearance: none !important;
+}
+
+.flagButton {
+    width: 72px !important;
+    background-color: #fff !important;
+    border-right-width: 0 !important;
+    border-color: var(--venia-black-color) !important;
+    padding-left: 10px !important;
+}
+
+.flagButton:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 1px;
+    height: 20px;
+    background-color: #cdcdcd;
+}
+
+.flagButton [class^='selected-flag'] {
+    width: 100% !important;
+    border-color: #cdcdcd !important;
+    background-color: unset !important;
+    margin-right: 6px;
+}
+
+.flagButton [class^=' country-list'] {
+    width: 350px;
+}
+
+.flagButton [class^='flag'] {
+    transform: scale(1.7) !important;
+}
+
+.flagButton [class^='dial-code'] {
+    margin-right: 10px;
+}
+
+.flagButton [class^='country-name'] {
+    font-family: var(--venia-global-fontFamily-sansSerifRtl);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Mobile */
+.rootMobile .phone {
+    height: 40px !important;
+}
+
+.rootMobile .submitButton {
+    height: 40px;
+    max-width: 350px;
+}
+
+.rootMobile .flagButton::before {
+    top: 9px;
+}
+
+/* Tablet */
+.rootTablet .container {
+    max-width: 600px;
+}
+
+.rootTablet .submitButton {
+    max-width: 600px;
+}
+
+.textLinkCon {
+    width: 100%;
+    /* max-width: 345px; */
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+    align-items: center;
+    display: flex;
+}
+
+.textLink {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.textLink:hover {
+    cursor: pointer;
+}
+
+.space {
+    height: 20px;
+}
+
+.forgotCon {
+    width: 100%;
+    max-width: 345px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.forgotLink {
+    text-align: left;
+    text-decoration: underline;
+}
+
+.forgotLink:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+.root {
+    align-items: center;
+    display: grid;
+    justify-items: center;
+    max-width: var(--venia-global-maxWidth);
+    width: 100%;
+}
+
+.form {
+    align-items: center;
+    display: grid;
+    justify-items: stretch;
+    width: 100%;
+}
+
+.container {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    max-width: 24rem;
+    position: relative;
+    width: 100%;
+}
+
+.search {
+    display: grid;
+    position: relative;
+}
+
+.autocomplete {
+    display: grid;
+    position: relative;
+    z-index: 1;
+}
+
+.inputSearchBar {
+    composes: input from '../Field/field.css';
+    height: 40px;
+    width: 384px;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.1));
+    outline: none;
+}
+
+.IconImage {
+    height: auto;
+}
+
+.afterIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    grid-area: after;
+    margin: 1px 1px;
+    height: 95%;
+    width: 40px;
+    background-color: #F5F5F5;
+    z-index: 1;
+}

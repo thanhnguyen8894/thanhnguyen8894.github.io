@@ -1,0 +1,44 @@
+.root {
+    display: flex;
+    justify-content: center;
+}
+
+.root iframe {
+    width: 400px !important;
+}
+
+.rootMobile {
+    max-width: 350px;
+    overflow: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.root form iframe {
+    width: 100% !important;
+}
+
+.header {
+    display: grid;
+    margin-top: 30px;
+    grid-gap: 30px;
+    grid-column: auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sectionFirst,
+.sectionSecond {
+    object-fit: contain;
+    width: 100%;
+}
+
+.hyperTitle {
+    margin-bottom: 20px;
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.headerMobile {
+    margin-top: 20px;
+}

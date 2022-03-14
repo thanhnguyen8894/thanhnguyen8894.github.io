@@ -1,0 +1,77 @@
+.rootMobile,
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--venia-black-color);
+}
+
+.subHeading {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: var(--venia-black-color);
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.containerPayment {
+    display: grid;
+    gap: 20px;
+}
+
+.group {
+    height: 95px;
+    width: 610px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--venia-black-color);
+    padding: 25px 30px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19.8px;
+    color: var(--venia-black-color);
+}
+
+.subTitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+    color: #929292;
+    margin-top: 5px;
+}
+
+.imageCard {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+}
+
+/* Mobile */
+.rootMobile {
+    padding: 30px 15px;
+}
+
+.rootMobile .group{
+    width: 100%;
+    height: unset;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rootMobile .imageCard {
+    margin-top: 15px;
+}

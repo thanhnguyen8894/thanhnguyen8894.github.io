@@ -1,0 +1,267 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 50px;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Search */
+.searchContainer {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    color: var(--venia-black-color);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.subTitle {
+    text-align: center;
+    color: var(--venia-black-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.rowView {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fieldItem {
+    --borderColor: var(--venia-black-color);
+}
+
+.selectStyle {
+    composes: input from '../Select/select.css';
+    color: #929292;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    width: 290px;
+}
+
+.textLink {
+    color: var(--venia-black-color);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+    max-width: 100%;
+    margin-top: 20px;
+    text-align: start;
+    min-width: 910px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.textLink:hover {
+    cursor: pointer;
+}
+
+.buttonSearch {
+    min-width: 290px;
+    background-color: var(--venia-black-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    color: #FFFFFF;
+    min-height: 50px;
+}
+
+.buttonSearch:disabled {
+    background-color: #929292;
+}
+
+/* Maps */
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerPanel {
+    color: var(--venia-black-color);
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 70%;
+    padding: 0 10px;
+}
+
+.storesContainer {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.map {
+    width: 100%;
+    height: 70vh;
+}
+
+.panel {
+    height: 70vh;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: auto;
+    min-width: 300px;
+}
+
+.panel::-webkit-scrollbar {
+    width: 6px;
+    height: 150px;
+}
+
+.panel::-webkit-scrollbar-corner .panel::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.panel::-webkit-scrollbar-thumb:horizontal {
+    /* background: transparent
+        linear-gradient(90deg, #2962ff 0%, #2668fc 31%, #00b8d4 100%) 0% 0%
+        no-repeat padding-box; */
+    background: #C4C4C4;
+    box-shadow: 0px 1px 3px #00000029;
+    border-radius: 12px;
+}
+
+.panel::-webkit-scrollbar-thumb:vertical {
+    /* background: linear-gradient(180deg, #2962ff, #2668fc, #00b8d4); */
+    background: #C4C4C4;
+    box-shadow: 0px 1px 3px #00000029;
+    border-radius: 12px;
+}
+
+.modal {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(var(--venia-global-color-gray));
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.modal_active {
+    visibility: visible;
+    composes: modal;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+@media (max-width: 1024px) {
+    .root {
+        padding-bottom: 20px;
+    }
+
+    /* Search */
+    .searchContainer {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-content: center;
+    }
+
+    .subTitle {
+        margin-bottom: 30px;
+    }
+
+    /* Maps */
+    .headerPanel {
+        width: 100%;
+    }
+
+    .storesContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        padding-bottom: 20px;
+    }
+
+    /* Search */
+    .searchContainer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .subTitle {
+        margin-bottom: 20px;
+    }
+
+    .rowView {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .fieldItem {
+        width: 100%;
+        --borderColor: var(--venia-black-color);
+    }
+
+    .selectStyle {
+        width: 100%;
+    }
+
+    /* Maps */
+    .storesContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .map {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .panel {
+        height: 200px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .headerPanel {
+        color: var(--venia-black-color);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .buttonSearch {
+        width: 100%;
+    }
+}

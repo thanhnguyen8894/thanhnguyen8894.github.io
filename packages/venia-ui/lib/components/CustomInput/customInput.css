@@ -1,0 +1,89 @@
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    margin-bottom: 5px;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.control {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    border: 1px solid #cdcdcd;
+    transition: all 0.3s;
+}
+.control:hover,
+.controlFocus {
+    border-color: #aaa;
+}
+
+.controlValid {
+    border-color: #33983d !important;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background-color: #cdcdcd;
+    transition: all 0.3s;
+}
+.control:hover .icon,
+.controlFocus .icon {
+    background-color: #aaa;
+}
+.controlValid .icon {
+    background-color: #33983d !important;
+}
+
+.radioButton {
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.check {
+    display: none;
+    height: 100%;
+}
+.controlValid .check {
+    display: initial;
+}
+
+.input {
+    display: flex;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 40px;
+    margin-top: -1px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    background-color: transparent;
+    color: black !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}

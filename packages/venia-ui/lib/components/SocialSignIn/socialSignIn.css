@@ -1,0 +1,55 @@
+.root {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.rootMobile{
+    composes: root;
+}
+
+.rootTablet{
+    composes: root;
+}
+
+.socialIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 7px rgb(0 0 0 / 10%);
+    cursor: pointer;
+    margin-inline-end: 20px;
+}
+
+.socialIcon:last-child {
+    margin-inline-end: 0px;
+}
+
+.socialName{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    color: var(--venia-black-color);
+    text-align: left;
+    padding-inline-start: 14px;
+}
+
+.rootMobile {
+    width: calc(100vw - 30px);
+    max-width: 350px;
+}
+
+.rootMobile .socialIcon,
+.rootTablet .socialIcon {
+    width: 100%;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.rootTablet .socialName{
+    margin-inline-start: 20px;
+}

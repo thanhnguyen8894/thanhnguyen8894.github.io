@@ -1,0 +1,102 @@
+.root {
+    border: 1px solid var(--venia-black-color);
+    padding: 20px;
+    width: 290px;
+    max-width: 290px;
+}
+
+.address {
+    font-size: 14px;
+    line-height: 20px;
+    color: #929292;
+    padding-bottom: 2px;
+}
+
+.userName {
+    color: var(--venia-black-color);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.inforContainer {
+    margin: 20px 0;
+    min-height: 80px;
+}
+
+.text {
+    color: var(--venia-black-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 40px;
+    line-height: 20px;
+}
+
+.btnBlock {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btnContent {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.btnText {
+    color: #fe4a00;
+    font-size: 14px;
+    line-height: 17px;
+    padding-left: 10px;
+}
+
+.confirmDeleteContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.titlePopup {
+    font-size: 20px;
+    color: var(--venia-black-color);
+    line-height: 20px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.btnAction {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnCancel {
+    composes: root_lowPriority from '../Button/button.css';
+    background-color: var(--venia-brown-color);
+    color: #fff;
+    border: none;
+}
+
+.btnDelete {
+    composes: root_normalPriorityNegative from '../Button/button.css';
+    background-color: #7a403a !important;
+    color: #fff;
+    border: none;
+}
+
+.errorContainer {
+    padding-bottom: 40px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    z-index: 1000;
+}

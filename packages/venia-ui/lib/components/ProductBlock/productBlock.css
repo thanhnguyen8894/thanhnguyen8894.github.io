@@ -1,0 +1,288 @@
+.root {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: grid;
+    justify-content: start;
+    grid-auto-flow: column;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    gap: 30px;
+}
+
+.heading {
+    color: var(--venia-black-color);
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 39px;
+}
+
+.slider {
+    position: relative;
+    grid-area: slider;
+}
+
+.banner {
+    position: relative;
+    display: grid;
+    grid-area: banner;
+    width: 280px;
+    height: 100%;
+}
+
+.banner img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.bannerContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    bottom: 50px;
+    padding-inline-start: 20px;
+    color: white;
+    background: linear-gradient(
+        95.3deg,
+        #8aa038 47.1%,
+        rgba(114, 147, 6, 0) 100%
+    );
+}
+
+.headerBannerContent {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.customBaseProductMobile {
+    composes: rootMobile from '../Product/baseProduct.css';
+}
+
+.customBaseProductTablet {
+    composes: rootTablet from '../Product/baseProduct.css';
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 39.2px;
+}
+
+.root :global .slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.containerTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.nextSlider,
+.preSlider {
+    position: relative;
+    /* width: 30px;
+    height: 30px; */
+    /* border: 1px solid #575956; */
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.preSlider {
+    margin-inline-end: 30px;
+}
+
+/* .nextSlider::before,
+.preSlider::before {
+    position: absolute;
+    display: block;
+    box-shadow: none;
+    content: '';
+    text-indent: -99999px;
+    transition: 0.5s;
+    padding: 0;
+    width: 0;
+    height: 0;
+    filter: brightness(100%);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid var(--venia-black-color);
+    left: 11px;
+    top: 6px;
+    background-image: src;
+} */
+
+/* .preSlider::before {
+    transform: rotate(180deg);
+    left: 9px;
+} */
+
+.nextSliderRtl {
+    composes: nextSlider;
+    transform: rotate(180deg);
+}
+
+.preSliderRtl {
+    composes: preSlider;
+    transform: rotate(180deg);
+}
+
+.preSliderRtl::before {
+    transform: rotate(0deg);
+    left: 11px;
+}
+
+.nextSliderRtl::before {
+    transform: rotate(180deg);
+    left: 9px;
+}
+
+.line30 {
+    height: 30px;
+}
+
+/* tablet */
+.rootTablet {
+    padding: 0 15px;
+}
+
+.rootTablet .heading {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.rootTablet .wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    max-height: 780px;
+}
+
+.rootTablet .banner {
+    width: 100%;
+}
+
+.rootTablet .bannerContent {
+    height: 70px;
+    bottom: 50px;
+}
+
+.rootTablet .bannerContent .headerBannerContent {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.rootTablet .bannerContent .title {
+    font-size: 24px;
+    line-height: 33.6px;
+}
+
+.rootTablet .slider {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.rootTablet .containerTitle {
+    padding-bottom: 20px;
+}
+
+/* mobile */
+.rootMobile {
+    padding: 0 15px;
+}
+
+.rootMobile .containerTitle {
+    padding-bottom: 20px;
+}
+
+.rootMobile .heading {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.rootMobile .wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    max-height: 100%;
+}
+
+.rootMobile .slider {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.rootMobile .banner {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.rootMobile .spaceMobile {
+    margin-bottom: 30px;
+}
+
+.rootMobile .bannerContent {
+    height: 55px;
+    bottom: 20px;
+}
+
+.rootMobile .bannerContent .headerBannerContent {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.rootMobile .bannerContent .title {
+    font-size: 18px;
+    line-height: 25.2px;
+}
+
+/* -----------Responsive list product block----------- */
+@media (min-width: 1025px) and (max-width: 1850px) {
+    .banner {
+        width: 280px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .slider {
+        padding: 13px 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .root :global .slick-slide {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .root :global .slick-slide > div:first-child,
+    .root :global .slick-slide > div:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .root :global .slick-slide {
+        display: grid !important;
+        grid-template-columns: auto auto;
+        gap: 15px;
+        justify-content: center !important;
+    }
+}

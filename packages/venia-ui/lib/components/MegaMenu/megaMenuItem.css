@@ -1,0 +1,70 @@
+.megaMenuItem {
+    /* padding: 0 10px; */
+    height: 100%;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16.9px;
+    color: var(--venia-black-color);
+}
+
+.megaMenuLink {
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.specialStyle {
+    color: #C5010E;
+}
+
+.tabImage {
+    composes: container from '../Image/image.css';
+    height: auto;
+    margin-inline-end: 10px;
+}
+
+.megaMenuLinkActive {
+    composes: megaMenuLink;
+}
+
+.megaMenuItem:hover>div,
+.megaMenuItem:focus>div {
+    display: flex;
+}
+
+.megaMenuItem .megaMenuLink::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1.5px;
+    background: #000000;
+    transition: width .3s;
+}
+
+.specialStyle .megaMenuLink::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1.5px;
+    background: #C5010E;
+    transition: width .3s;
+}
+
+.megaMenuLinkActive.megaMenuLink::after,
+.megaMenuItem:hover .megaMenuLink::after,
+.megaMenuItem:focus .megaMenuLink::after {
+    width: 100%;
+}
+
+
+@media (max-width: 960px) {
+    .megaMenuItem {
+        font-size: 14px;
+    }
+}

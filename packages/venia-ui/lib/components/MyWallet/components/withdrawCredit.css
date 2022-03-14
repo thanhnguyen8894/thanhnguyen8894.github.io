@@ -1,0 +1,173 @@
+.root {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.rootContainer {
+    /* display: grid; */
+}
+
+/* HEADERS */
+.headerContainer {
+    margin-top: 20px;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--venia-black-color);
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subHeading {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--venia-black-color);
+    text-align: center;
+}
+
+.rootContent {
+    display: grid;
+    width: 100%;
+}
+
+.field {
+    grid-column-end: span 2;
+    margin-top: 5px;
+}
+
+.buttonsContainer {
+    composes: field;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.submitButton {
+    composes: root_normalPriority from '../../Button/button.css';
+    font-size: 16px;
+    font-weight: 600;
+    background: #353535;
+    border: 1px solid #353535;
+    color: white;
+    text-transform: uppercase;
+    width: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 3px;
+    min-height: 50px;
+    max-width: 200px;
+}
+
+.backButton {
+    composes: root_normalPriority from '../../Button/button.css';
+    font-size: 16px;
+    font-weight: 600;
+    background: #ffffff;
+    border: 1px solid #353535;
+    color: #000000;
+    text-transform: uppercase;
+    width: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 3px;
+    min-height: 50px;
+    max-width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.transGroup {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.fromGroup {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 70%;
+}
+
+.group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.groupTitle {
+    color: var(--venia-black-color);
+    font-weight: 500;
+}
+
+.formContent {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.transContent {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 960px) {
+    .root {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .fromGroup {
+        width: 100%;
+        margin: 0px;
+        margin-top: 40px;
+    }
+
+    .formContent {
+        padding: 20px;
+    }
+
+    .transGroup {
+        width: 100%;
+        margin: 0px;
+        margin-top: 40px;
+    }
+
+    .transContent {
+        background-color: #ffffff;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .buttonsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submitButton {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .backButton {
+        width: 100%;
+        max-width: 100%;
+        margin: 0px;
+    }
+}

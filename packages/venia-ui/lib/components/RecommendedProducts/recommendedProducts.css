@@ -1,0 +1,119 @@
+.root {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.containerHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.heading {
+    color: var(--venia-black-color);
+    text-transform: unset;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 31px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.root :global .slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.nextSlider,
+.preSlider {
+    position: relative;
+    /* width: 30px;
+    height: 30px;
+    border: 1px solid var(--venia-black-color); */
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin: 0;
+}
+
+.preSlider {
+    margin-inline-end: 30px;
+}
+
+/* .nextSlider::before,
+.preSlider::before {
+    position: absolute;
+    display: block;
+    box-shadow: none;
+    content: '';
+    text-indent: -99999px;
+    transition: 0.5s;
+    padding: 0;
+    width: 0;
+    height: 0;
+    filter: brightness(100%);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid var(--venia-black-color);
+    left: 11px;
+    top: 6px;
+} */
+
+/* .preSlider::before {
+    transform: rotate(180deg);
+    left: 9px;
+} */
+
+.nextSliderRtl {
+    composes: nextSlider;
+    transform: rotate(180deg);
+}
+
+.preSliderRtl {
+    composes: preSlider;
+    transform: rotate(180deg);
+}
+
+.preSliderRtl::before {
+    transform: rotate(180deg);
+    left: 11px;
+}
+
+.nextSliderRtl::before {
+    transform: rotate(180deg);
+    left: 9px;
+}
+
+.addToCart {
+    composes: addToCart from '../Product/baseProduct.css';
+    height: 30px !important;
+}
+
+/* tablet */
+.rootTablet .heading {
+    font-size: 24px;
+}
+
+/* mobile */
+.rootMobile .heading {
+    font-size: 18.5px;
+}
+
+.rootMobile.customMobileProductDetails .nextSlider::before,
+.rootMobile.customMobileProductDetails .preSlider::before {
+    left: 8px;
+    top: 5px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid var(--venia-black-color);
+}

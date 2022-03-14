@@ -1,0 +1,11 @@
+.root {
+    border-top: 1px solid rgb(var(--venia-global-color-border));
+    display: grid;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    color: var(--venia-black-color);
+}
+
+.root:empty {
+    display: none;
+}

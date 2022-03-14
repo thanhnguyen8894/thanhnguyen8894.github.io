@@ -1,0 +1,38 @@
+.root {
+    align-items: center;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-template-columns: 60px 1fr;
+}
+
+.image {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.thumbnail {
+    height: 75px;
+    max-height: 75px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.name {
+    word-break: break-word;
+    color: var(--venia-black-color);
+}
+
+.specialPrice {
+    color: #ED0006;
+}
+
+.regularPrice {
+    color: #C4C4C4;
+    text-decoration: line-through;
+}
+
+.price{
+    color: var(--venia-black-color);
+}

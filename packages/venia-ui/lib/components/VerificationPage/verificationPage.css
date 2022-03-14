@@ -1,0 +1,176 @@
+.container {
+    max-width: var(--venia-global-maxWidth);
+    position: relative;
+}
+
+.root {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 560px;
+    padding: 170px 0;
+    direction: ltr !important;
+}
+
+.verify {
+    max-height: 600px;
+}
+
+.header {
+    display: grid;
+    gap: 10px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 39px;
+    color: var(--venia-black-color);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.subTitle {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: var(--venia-black-color);
+}
+
+.miniTitle {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15.4px;
+    color: var(--venia-black-color);
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.formError {
+    text-align: center;
+}
+
+.countdown {
+    display: grid;
+    justify-content: flex-end;
+    align-items: center;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 22px;
+    justify-content: space-between;
+}
+
+.countdownRtl {
+    display: grid;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 22px;
+    grid-template-columns: repeat(1, auto);
+}
+
+.modal {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(var(--venia-global-color-gray));
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.modal_active {
+    visibility: visible;
+    composes: modal;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+.submitButton {
+    composes: root_highPriority from '../Button/button.css';
+    width: 345px;
+    height: 50px;
+}
+
+.resendButton {
+    display: grid;
+    justify-content: center;
+}
+
+/* CSS Tablet */
+
+.rootTablet {
+    padding: 70px 0;
+    gap: 20px;
+}
+
+.rootTablet .header {
+    gap: 10px;
+}
+
+/* CSS Mobile */
+
+.rootMobile {
+    gap: 15px;
+    padding: 70px 0;
+}
+
+.rootMobile .header {
+    display: grid;
+    gap: 10px;
+}
+
+.rootMobile .title {
+    font-size: 24px;
+    line-height: 31.2px;
+}
+
+.rootMobile .subTitle {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0em;
+    max-width: 343px;
+}
+
+.rootMobile .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 110px; */
+    margin: 0 auto;
+}
+
+.rootMobile .countdown {
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.rootMobile .countdownRtl {
+    gap: 20px;
+}
+
+.rootMobile .miniTitle {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15.6px;
+}
+
+.rootMobile .inputCountdown {
+    /* composes: inputCountdown from '../verifyPhone.css'; */
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15.6px;
+}

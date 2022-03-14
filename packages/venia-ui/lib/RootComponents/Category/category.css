@@ -1,0 +1,149 @@
+.headerCategory {
+    display: grid;
+    row-gap: 50px;
+    padding-top: 30px;
+}
+
+.mainHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bodyContainer {
+    padding: 18px 0;
+}
+
+.subHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.placeholder {
+    height: 100vh;
+}
+
+.headerButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    display: none;
+}
+
+.sortContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline-start: 16px;
+}
+
+.sortContainer>img {
+    margin-inline-start: 16px;
+}
+
+.countText,
+.sortText {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--venia-black-color);
+    line-height: 16.41px;
+}
+
+.countText {
+    min-width: max-content;
+}
+
+.sortText {
+    margin-inline-end: 20px;
+    margin-inline-start: 10px;
+}
+
+.filterButton {
+    height: 40px;
+    width: 108px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--venia-black-color);
+    padding: 0 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.contentFilterButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentFilterButton>div {
+    height: 20px;
+}
+
+.filterSelected li {
+    float: left;
+    padding-inline-end: 12px;
+    padding-bottom: 5px;
+}
+
+.bannerContainer {
+    position: relative;
+    display: grid;
+}
+
+.bannerContainer img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.bannerText {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+}
+
+.rtl .bannerText {
+    left: 0px;
+    right: 50px;
+}
+
+.recommendedProducts {
+    composes: root from '../../components/RecommendedProducts/recommendedProducts.css';
+    margin-top: 100px;
+}
+
+/* Mobile */
+.rootMobile .bannerText {
+    left: 30px;
+    bottom: 30px;
+    font-size: 32px;
+}
+
+.rtl .rootMobile .bannerText {
+    left: 0px;
+    right: 30px;
+}
+
+.rootMobile .bodyContainer {
+    padding: 16px;
+}
+
+.rootMobile .headerCategory {
+    row-gap: 16px;
+}
+
+.rootMobile .mainHeader {
+    justify-content: flex-end;
+}

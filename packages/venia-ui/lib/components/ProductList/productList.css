@@ -1,0 +1,192 @@
+.headerCategory {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--venia-black-color);
+}
+
+.gallery {
+    margin-bottom: 130px;
+}
+
+.placeholder {
+    height: 100vh;
+}
+
+.headerButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    display: none;
+}
+
+.sortContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.countText,
+.sortText {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--venia-black-color);
+    line-height: 16.41px;
+    text-transform: uppercase;
+}
+
+.sortText {
+    margin-right: 20px;
+}
+
+.countText {
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.bannerContainer {
+    position: relative;
+    display: grid;
+    height: 320px;
+    margin-bottom: 50px;
+}
+
+.bannerContainer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: -16px;
+    z-index: 1;
+    background-image: url(/venia-static/icons/category/coverEffectDesktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.bannerText {
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    left: 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.breadcrumbs {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 20px;
+    margin-bottom: 35px;
+}
+
+.divider,
+.link {
+    color: #C4C4C4;
+    padding: 0.25rem;
+}
+
+.text {
+    color: #172026;
+    padding: 0.25rem;
+}
+/* Tablet */
+.rootTablet .bannerContainer{
+    height: 280px;
+    margin-bottom: 30px;
+}
+
+.rootTablet .breadcrumbs {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+/* Mobile*/
+.rootMobile .headerCategory {
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.rootMobile .headerName {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.rootMobile .title {
+    font-size: 20px;
+}
+
+.rootMobile .headerButtons {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr min-content 1fr;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.rootMobile .countText {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--venia-black-color);
+    line-height: 13.2px;
+    text-transform: uppercase;
+}
+
+.rootMobile .countText {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.rootMobile .gallery {
+    margin-bottom: 50px;
+}
+
+.rootMobile .bannerContainer {
+    height: 150px;
+    margin-bottom: 30px;
+    background-image: url(/venia-static/icons/category/bannerCateMobile.png);
+}
+
+.rootMobile .bannerContainer::before {
+    background-image: url(/venia-static/icons/category/coverEffectMobile.png);
+}
+
+.rootMobile .bannerText {
+    font-size: 20px;
+}
+
+.rootMobile .breadcrumbs {
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .rootMobile .countText {
+        font-size: 14px;
+    }
+}

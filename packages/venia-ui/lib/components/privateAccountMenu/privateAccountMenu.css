@@ -1,0 +1,31 @@
+.root {
+    max-width: var(--venia-global-sideMenuWidth);
+    padding-top: 60px;
+    display: grid;
+    gap: 50px;
+}
+
+.signOutButton {
+    display: flex;
+    justify-content: flex-start;
+    padding-inline-start: 40px;
+    align-items: center;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--venia-black-color);
+}
+.signOutButton span {
+    padding-inline-end: 18.23px;
+}
+
+.signOutButton svg {
+    stroke: var(--venia-black-color);
+    width: 20px;
+    height: 20px;
+}
+
+/* Mobile */
+.rootMobile {
+    display: grid;
+    gap: 40px;
+}

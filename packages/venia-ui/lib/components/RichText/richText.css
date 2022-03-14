@@ -1,0 +1,19 @@
+.root {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: var(--venia-black-color);
+    /* padding: 0 0.5rem; */
+    /* direction: ltr; */
+    white-space: normal;
+}
+
+.root p {
+    /* margin: 0 0 1rem; */
+}
+
+.root ul {
+    list-style-type: disc;
+    margin: 0 0 1rem;
+    padding-left: 2.5rem;
+}

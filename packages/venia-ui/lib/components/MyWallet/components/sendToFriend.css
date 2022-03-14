@@ -1,0 +1,97 @@
+.root {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.rootContainer {
+    width: 70%;
+}
+
+.heading {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.rootContent {
+    display: grid;
+    width: 100%;
+}
+
+.field {
+    grid-column-end: span 2;
+    margin-top: 5px;
+}
+
+.buttonsContainer {
+    composes: field;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.submitButton {
+    composes: root_normalPriority from '../../Button/button.css';
+    font-size: 16px;
+    font-weight: 600;
+    background: #353535;
+    border: 1px solid #353535;
+    color: white;
+    text-transform: uppercase;
+    width: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 3px;
+    min-height: 50px;
+    max-width: 200px;
+}
+
+.backButton {
+    composes: root_normalPriority from '../../Button/button.css';
+    font-size: 16px;
+    font-weight: 600;
+    background: #ffffff;
+    border: 1px solid #353535;
+    color: #000000;
+    text-transform: uppercase;
+    width: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 3px;
+    min-height: 50px;
+    max-width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 960px) {
+    .root {
+        width: 100%;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .rootContainer {
+        width: 100%;
+    }
+
+    .buttonsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submitButton {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .backButton {
+        width: 100%;
+        max-width: 100%;
+        margin: 0px;
+    }
+}

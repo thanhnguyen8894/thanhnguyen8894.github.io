@@ -1,0 +1,131 @@
+.root {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* margin: 70px 0 85px 0; */
+    background-color: #fafbfd;
+}
+
+.rootMobile {
+    gap: 0;
+}
+
+.block {
+    display: grid;
+    grid-auto-flow: column;
+    padding: 40px 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    background-color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-inline-end: 20px;
+}
+
+.img {
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 16px;
+    color: var(--venia-black-color);
+
+    font-weight: 500;
+    line-height: 20.8px;
+    padding-bottom: 10px;
+}
+
+.subTitle {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: var(--venia-black-color);
+}
+
+/* Tablet */
+.rootTablet {
+    display: unset;
+    /* margin-bottom: 30px; */
+    padding-top: 40px;
+}
+
+.rootTablet .block {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 40px 0;
+}
+
+.rootTablet .icon {
+    height: 50px;
+    width: 50px;
+}
+
+.rootTablet .img {
+    padding: 3px;
+}
+
+.rootTablet .title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.8px;
+    padding-bottom: 10px;
+    color: var(--venia-black-color);
+    text-align: center;
+}
+
+.rootTablet .subTitle {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: var(--venia-black-color);
+    text-align: center;
+}
+
+/* Mobile */
+.rootMobile {
+    padding-top: 40px;
+    display: unset;
+}
+
+.rootMobile .block {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 40px 0;
+}
+
+.rootMobile .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.rootMobile .title {
+    font-size: 16px;
+    line-height: 20.8px;
+    font-weight: 500;
+    color: var(--venia-black-color);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.rootMobile .subTitle {
+    max-width: 165px;
+}
+
+.rootMobile .img {
+    padding: 3px;
+}
+
+@media (max-width: 1024px) {
+    .rootTablet .block {
+        max-width: none;
+    }
+}

@@ -1,0 +1,227 @@
+.sectionTitle {
+    align-items: center;
+    display: flex;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28.6px;
+    /* margin-bottom: 1.5rem; */
+}
+
+.detailsDescription {
+    grid-column: 1 / span 1;
+    grid-row: fold / span 1;
+}
+
+.reviewsDescriptionHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 0 15px 0;
+}
+
+.reviewsDescriptionLeft {
+    display: flex;
+    align-items: center;
+    color: var(--venia-black-color);
+    margin-bottom: 20px;
+}
+
+.reviewsDescriptionRate {
+    margin-inline-end: 10px;
+    line-height: 19.5px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--venia-black-color);
+}
+
+.starImage {
+    margin-inline-end: 8px;
+}
+
+.reviewsDescriptionHeader .addReview {
+    margin: 0;
+    padding: 10px 40px;
+    border: 1px solid var(--venia-black-color);
+    line-height: 16.8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.reviewsDescriptionTitle {
+    line-height: 16.9px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.reviewContent {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 15px;
+}
+
+.reviewUser {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userName {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23.4px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--venia-black-color);
+}
+
+.reviewComment {
+    max-width: 1220px;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.date {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16.9px;
+    color: var(--venia-black-color);
+}
+
+.checkAllReviews {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.checkAllReviews span {
+    cursor: pointer;
+}
+
+.checkAllReviews .btnCheckAllReviews {
+    cursor: pointer;
+    color: var(--venia-white-color);
+    background-color: var(--venia-brown-color);
+    padding: 10px 35px;
+    margin: 15px 0 70px 0;
+}
+
+.reviewsDescriptionHeaderMobile {
+    composes: reviewsDescriptionHeader;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.reviewsDescriptionLeftMobile {
+    composes: reviewsDescriptionLeft;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.reviewsDescriptionRateMobile {
+    composes: reviewsDescriptionRate;
+    margin: 0;
+    text-align: center;
+}
+
+.addReviewMobile {
+    composes: addReview;
+    text-align: end;
+    margin-top: 10px !important;
+}
+
+.checkAllReviewsMobile {
+    composes: checkAllReviews;
+    margin-bottom: 10px;
+}
+
+.detailsDescriptionTitle {
+    composes: sectionTitle;
+}
+
+.additionalContainer {
+    margin-bottom: 20px;
+}
+
+.additionalContainer .lineItems:nth-child(odd) {
+    background: #FAFBFD;
+}
+
+.lineItems {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    max-width: 696px;
+    margin: 0 auto;
+    border: 1px solid #F0F1F3;
+}
+
+.lineItemLabel {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19.5px;
+    color: var(--venia-black-color);
+    min-width: 300px;
+    padding: 15px 20px;
+    border-inline-end: 1px solid #F0F1F3;
+}
+
+.lineItemText {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: var(--venia-black-color);
+    padding: 15px 20px;
+    white-space: normal;
+}
+
+.line30 {
+    height: 30px;
+}
+
+.bottomTabs {
+    width: 100%;
+    max-width: 1570px;
+    margin: 0 auto;
+    padding: 90px 15px 0;
+}
+
+.bottomTabsMobile {
+    white-space: nowrap;
+    padding-top: 50px;
+}
+
+.rootCustom {
+    margin: unset;
+}
+
+.accordion {
+    display: grid;
+    gap: 5px;
+}
+
+.bottomTabsMobile .lineItemLabel {
+    min-width: calc(calc(100vw - 30px) / 2);
+}
+
+@media (min-width: 1024px) {
+    .detailsDescription {
+        align-self: stretch;
+        border-top-width: 1px;
+        margin: 0;
+        padding: 50px 0;
+    }
+}

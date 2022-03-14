@@ -1,0 +1,408 @@
+.root {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto;
+    /* grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); */
+    height: auto;
+    background-color: #f8f8f8;
+    align-items: center;
+    grid-template-columns: 47% 1fr;
+    background-image: linear-gradient(180deg, #070302 0%, #040301 100%);
+    grid-template-areas: 'left right';
+    height: 322px;
+    max-width: var(--venia-global-maxWidth);
+    min-width: var(--venia-global-maxWidth);
+    margin: 75px auto 70px auto;
+}
+
+.rootCustomDefault {
+    margin: 70px auto 55px auto;
+    max-width: var(--venia-global-maxWidth);
+    min-width: var(--venia-global-maxWidth);
+}
+
+.rootCustomOther {
+    margin: 70px auto 85px auto;
+    max-width: var(--venia-global-maxWidth);
+    min-width: var(--venia-global-maxWidth);
+}
+
+.rootCustomMobileDefault {
+    max-width: none;
+    min-width: unset;
+    margin: 30px 0;
+}
+
+.rootCustomMobileOther {
+    margin: 50px 0 70px 0;
+}
+
+.imageLeft {
+    grid-area: left;
+    background-image: var(--background-image-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 39.2px;
+    color: var(--venia-black-color);
+}
+
+.container {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.containerSubsInAuth {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    column-gap: 5%;
+    /* margin-top: 120px; */
+    margin-bottom: 80px;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafbfd;
+    max-width: var(--venia-global-maxWidth);
+    margin: 0px auto 80px auto;
+    justify-content: center;
+    align-items: center;
+    min-width: var(--venia-global-maxWidth);
+}
+
+.containerSubsInAuth .titleRight {
+    display: grid;
+    justify-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.containerSubsInAuth h1 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36.4px;
+    color: var(--venia-black-color);
+    margin-bottom: 20px;
+}
+
+.containerSubsInAuth .buttonsContainer button {
+    width: 150px;
+    height: 40px;
+    background-color: var(--venia-brown-color);
+    line-height: 16.8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    border: 0;
+    text-transform: none;
+    min-width: auto;
+}
+
+.containerSubsInAuth h2 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: var(--venia-black-color);
+}
+
+.containerSubsInAuth .subscribeInputRight h2 {
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 1px;
+    opacity: 0.2;
+    background-color: var(--venia-black-color);
+    height: 50%;
+}
+
+.subscribeInputRight {
+    display: grid;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.form {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    align-items: flex-start;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+}
+
+.form input {
+    width: 300px;
+    min-width: 190px;
+    height: 40px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.form input::-webkit-input-placeholder {
+    /* Edge */
+    color: var(--venia-black-color);
+    opacity: 0.5;
+}
+
+.form input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--venia-black-color);
+    opacity: 0.5;
+}
+
+.form input::placeholder {
+    color: var(--venia-black-color);
+    opacity: 0.5;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.buttonsContainer button {
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border: 0;
+    text-transform: none;
+}
+
+.titleRight {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36.4px;
+    color: var(--venia-white-color);
+}
+
+.titleRight h2 {
+    padding-bottom: 10px;
+}
+
+.subscribeInput {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 250px max-content;
+}
+
+.social {
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 10px;
+    grid-template-columns: repeat(4, max-content);
+    gap: 20px;
+}
+
+.containerSubsInAuth .social {
+    gap: 20px;
+}
+
+.imgPay {
+    height: unset;
+    position: relative;
+    margin-inline-end: 10px;
+    justify-content: flex-start;
+}
+
+.additionalBanner {
+    cursor: pointer;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.additionalBannerMobile {
+    composes: additionalBanner;
+    margin-top: 50px;
+}
+
+/* tablet */
+.rootTablet {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto;
+    align-items: flex-start;
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 15px;
+    padding: 20px 15px;
+    text-align: center;
+    background-color: #f8f8f8;
+    height: auto;
+    max-width: none;
+    min-width: calc(100vw - 30px);
+}
+
+.rootTablet .title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--venia-black-color);
+}
+
+.rootTablet .form {
+    grid-gap: 0;
+}
+
+.rootTablet .subscribeInputRight {
+    width: auto;
+}
+
+.rootTablet .form input {
+    border-radius: 0;
+    height: 40px;
+    padding: 0 20px;
+}
+
+.rootTablet .buttonsContainer {
+    height: 40px;
+    background-color: transparent;
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border: 0;
+}
+
+.rootTablet .buttonsContainer button {
+    min-width: unset;
+    height: 40px;
+    box-shadow: none;
+    border: 0;
+    height: 40px;
+    border-color: transparent;
+    height: 40px;
+    padding: 12px;
+}
+
+/* mobile */
+.rootMobile {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto;
+    align-items: flex-start;
+    grid-template-columns: repeat(1, auto);
+    /* grid-gap: 15px; */
+    padding: 20px 15px;
+    height: auto;
+    text-align: center;
+    background-color: #f8f8f8;
+    background: var(--backgroundImageMobile);
+    background-size: cover;
+    margin: 30px 0 50px 0;
+    max-width: none;
+    min-width: calc(100vw - 30px);
+}
+
+.rootMobile .subscribeInputRight {
+    width: auto;
+}
+
+.rootMobile .title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--venia-black-color);
+}
+
+.rootMobile .form {
+    grid-gap: 0;
+}
+
+.rootMobile .form input {
+    border-radius: 0;
+    width: 400px;
+    height: 40px;
+    background: #ffffff;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.rootMobile .buttonsContainer {
+    height: 40px;
+    background-color: var(--venia-black-color);
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border: 0;
+}
+
+.rootMobile .buttonsContainer button {
+    min-width: unset;
+    box-shadow: none;
+    border: 0;
+    border-color: transparent;
+    height: 40px;
+    width: 140px;
+    padding: 12px;
+}
+
+.rootMobile .subscribeInput {
+    grid-template-columns: 180px max-content;
+}
+
+.containerSubsInAuthMobile .subscribeInput {
+    grid-template-columns: 180px max-content;
+}
+
+.containerSubsInAuthMobile {
+    grid-template-columns: auto;
+    margin-top: 0px;
+    min-width: unset;
+    width: calc(100vw - 30px);
+}
+
+.containerSubsInAuthMobile .subscribeInputRight {
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    max-width: none;
+    width: auto;
+}
+
+.containerSubsInAuthMobile .buttonsContainer button {
+    width: 140px;
+}
+
+.containerSubsInAuthMobile .social {
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.containerSubsInAuthMobile h1 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: var(--venia-black-color);
+}
+
+.containerSubsInAuthMobile h2 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: var(--venia-black-color);
+}
+
+@media (max-width: 367px) {
+    .title {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        font-size: 16px !important;
+    }
+}

@@ -1,0 +1,16 @@
+.imageContainer {
+    background-color: #fff;
+}
+
+.image {
+    object-fit: contain;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--venia-black-color);
+    padding-top: 10px;
+    text-align: center;
+}

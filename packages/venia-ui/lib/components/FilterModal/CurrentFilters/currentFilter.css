@@ -1,0 +1,18 @@
+.root {
+    align-items: center;
+    color: var(--venia-black-color);
+    display: inline-grid;
+    font-size: 13px;
+    font-weight: var(--venia-global-fontWeight-regular);
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    min-height: 17px;
+    padding: 7px;
+    white-space: nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+.root svg {
+    stroke: var(--venia-black-color);
+}

@@ -1,0 +1,206 @@
+.root {}
+
+.commentsBlock {
+    display: grid;
+    grid-template-columns: auto 150px;
+    column-gap: 15px;
+    margin-bottom: 30px;
+}
+
+.commentsBlock p,
+.commentsBlock span {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #202020;
+}
+
+.commentsBlock span {
+    color: #008B8B;
+}
+
+.imageBlock {
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.imageBlock img {
+    object-fit: contain;
+    background-color: white;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--venia-black-color);
+    padding-top: 10px;
+    text-align: center;
+}
+
+.product {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #202020;
+    padding-bottom: 20px;
+}
+
+.imageTitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #202020;
+    text-transform: capitalize;
+}
+
+.imageHeader {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.amount {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #CF1C43;
+    text-transform: uppercase;
+    /* padding-inline-start: 15px; */
+    min-width: max-content;
+}
+
+.imageRow {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.imageText {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #202020;
+    padding-right: 10px;
+    width: 130px;
+}
+
+.subImageText {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #202020;
+    padding-left: 10px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #E5E5E5;
+    margin-bottom: 20px;
+}
+
+.totalCost {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #202020;
+    padding-bottom: 20px;
+}
+
+.rowTotal {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.highLine .subTotal,
+.highLine .amountTotal {
+    font-weight: 500;
+}
+
+.subTotal {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #202020;
+}
+
+.amountTotal {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: #202020;
+    display: flex;
+}
+
+.fontnomal {
+    font-weight: normal;
+}
+
+.delivery {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.rootMobile {}
+
+.rootMobile .commentsBlock {
+    display: flex;
+    grid-template-columns: unset;
+    flex-direction: column-reverse;
+}
+
+.rootMobile .imageHeader {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.rootMobile .imageTitle {
+    padding-bottom: 8px;
+}
+
+.rootMobile .imageRow {
+    display: block;
+    padding-bottom: 0;
+}
+
+.rootMobile .imageText {
+    padding-bottom: 7px;
+}
+
+.rootMobile .imageBlock {
+    margin-bottom: 20px;
+}
+
+.rootMobile .totalCost {
+    padding-bottom: 15px;
+}

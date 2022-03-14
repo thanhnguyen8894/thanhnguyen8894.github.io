@@ -1,0 +1,7 @@
+.root {
+    composes: input from '../Select/select.css';
+    color: #929292;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+}

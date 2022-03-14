@@ -1,0 +1,167 @@
+.rootMobile,
+.root {
+    --stroke: var(--venia-black-color);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 30px 50px 30px;
+    justify-items: center;
+    border: 1px solid #c4c4c4;
+}
+
+.rootCart {
+    composes: root;
+    grid-template-columns: 30px 40px 30px;
+    border: none;
+}
+
+.rootProd {
+    composes: root;
+    grid-template-columns: repeat(3, auto);
+    border: none;
+    min-width: 160px;
+}
+
+.quantityInProd {
+    min-height: 40px;
+}
+
+.quantityInProd>span .input {
+    height: 50px;
+    background-color: #402020;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label:not(:focus):not(:active) {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    white-space: nowrap;
+}
+
+.button {
+    align-items: center;
+    background-color: rgb(var(--venia-global-color-gray-50));
+    display: inline-flex;
+    justify-content: center;
+    stroke: rgb(var(--stroke));
+}
+
+.button:hover {
+    --stroke: rgb(var(--venia-global-color-gray-900));
+    border-color: rgb(var(--stroke));
+}
+
+.button:disabled,
+.button:disabled:hover {
+    --stroke: rgb(var(--venia-global-color-gray-400));
+    border-color: rgb(var(--venia-global-color-gray-400));
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button_decrement {
+    composes: button;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #D9D9D9;
+}
+
+.button_increment {
+    composes: button;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #D9D9D9;
+}
+
+.buttonProd {
+    composes: button;
+    border: 1px solid var(--venia-black-color);
+    background-color: #ffffff;
+    stroke: rgb(var(--stroke));
+    border-radius: 2px;
+    height: 48px;
+    width: 48px;
+    min-width: 40px;
+    padding: 0 0.5rem;
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 1;
+    pointer-events: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    touch-action: manipulation;
+}
+
+.input {
+    composes: input from '../../TextInput/textInput.css';
+    text-align: center;
+    height: 35px;
+    color: var(--venia-black-color);
+    font-size: 14px;
+}
+
+.inputProd {
+    composes: input;
+    color: #ffffff;
+    background-color: var(--venia-black-color);
+    height: 48px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.rootCart .input {
+    height: 30px;
+    width: 30px;
+}
+
+.quantityRootProd .input {
+    height: 30px;
+}
+
+.rootMobile {
+    min-width: 136px;
+}
+
+.rootMobile .quantityInProd {
+    display: flex;
+}
+
+.rootMobile .buttonProd {
+    height: 40px;
+    width: 40px;
+}
+
+.rootMobile .quantityInProd>span {
+    height: 100%;
+    width: 40px;
+}
+
+.rootMobile .quantityInProd>span .input {
+    height: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.6px;
+}

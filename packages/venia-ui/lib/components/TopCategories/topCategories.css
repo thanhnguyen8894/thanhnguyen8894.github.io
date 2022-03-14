@@ -1,0 +1,86 @@
+.root {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+.section {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto;
+}
+
+.section img {
+    margin: 0;
+    object-fit: contain;
+    width: 100%;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .sectionText {
+        width: 100%;
+    }
+    .sectionText h4 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .root {
+        grid-template-columns: auto;
+    }
+    .sectionText {
+        top: 50px;
+        width: 100%;
+        bottom: auto;
+    }
+    .sectionText h4 {
+        font-size: 24px;
+        line-height: 33.6px;
+    }
+    .sectionTextSecond {
+        top: auto;
+        bottom: 50px;
+    }
+    .sectionTextThree {
+        top: 50px;
+        bottom: auto;
+    }
+    .sectionTextFour {
+        top: auto;
+        bottom: 50px;
+    }
+}
+
+@media (max-device-width: 640px) {
+    .sectionText {
+        top: auto;
+        width: 100%;
+        bottom: 20px;
+    }
+    .sectionText h4 {
+        font-size: 16px;
+        line-height: 22.4px;
+    }
+    .sectionTextThree {
+        top: 20px;
+        bottom: auto;
+    }
+    .sectionTextFour {
+        top: auto;
+        bottom: 20px;
+    }
+    .sectionSecondImageRight {
+        width: 150px;
+        right: -175px;
+        top: 20px;
+        left: auto;
+    }
+}
+
+.rootTablet,
+.rootMobile {
+    grid-gap: 20px;
+    padding: 0 15px;
+    margin: 20px 0;
+}

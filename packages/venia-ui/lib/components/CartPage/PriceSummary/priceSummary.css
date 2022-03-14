@@ -1,0 +1,136 @@
+.rootMobile,
+.root {}
+
+.errorText {
+    color: rgb(var(--venia-global-color-error));
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.lineItems {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr auto;
+    line-height: 1.5rem;
+    margin: 20px auto;
+}
+
+.lineItemsTotal {
+    composes: lineItems;
+    margin: 35px auto 20px;
+}
+
+.lineItemLabel,
+.price {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--venia-black-color);
+    line-height: 24px;
+}
+
+.lineItemLabel {
+    justify-self: start;
+}
+
+.price {
+    justify-self: end;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20.8px;
+}
+
+.lineItemLabelLight {
+    composes: lineItemLabel;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.priceLight {
+    composes: price;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    display: flex;
+}
+
+.priceHeavy {
+    composes: price;
+    font-weight: 500;
+}
+
+.totalLabel,
+.totalPrice {
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: 500;
+    color: var(--venia-black-color);
+    /* text-transform: uppercase; */
+}
+
+.totalLabel {
+    composes: lineItemLabel;
+}
+
+.totalPrice {
+    composes: price;
+}
+
+.buttonCheckout {
+    composes: root_highPriority from '~@magento/venia-ui/lib/components/Button/button.css';
+    width: 100%;
+    height: 48px;
+    color: var(--venia-white-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    /* background-color: var(--venia-black-color); */
+}
+
+.buttonCheckout:disabled {
+    background-color: #cccdcb;
+}
+
+.lineDivine {
+    border-top: 1px solid #E5E5E5;
+}
+
+.couponEntryForm {
+    composes: entryForm from '../PriceAdjustments/CouponCode/couponCode.css';
+}
+
+.couponEntryForm input {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--venia-black-color);
+    width: 100%;
+    height: 40px;
+}
+
+.couponEntryForm::-webkit-input-placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    color: #CDCDCD;
+}
+
+.lineItemsBold .lineItemLabelLight,
+.lineItemsBold .priceLight {
+    font-weight: 500;
+}
+
+/* Mobile */
+.rootMobile .totalLabel {
+    font-size: 16px !important;
+    line-height: 14px;
+}
+
+.rootMobile .lineItemsTotal {
+    align-items: center;
+    margin: 20px auto;
+}
+
+.rootMobile .lineItemLabel {
+    font-size: 14px;
+}
+
+.rootMobile .buttonCheckout {
+    font-size: 14px;
+}

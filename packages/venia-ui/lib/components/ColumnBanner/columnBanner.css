@@ -1,0 +1,105 @@
+.root {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: auto;
+    grid-gap: 30px;
+}
+
+.rootThree {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: auto;
+    grid-gap: 30px;
+    /* margin: 70px 0; */
+}
+
+.rootTwo {
+    display: grid;
+    grid-template-columns: 1.43fr 1fr;
+    grid-column: auto;
+    grid-gap: 30px;
+    /* margin: 70px 0; */
+}
+
+.rootTwoReverse {
+    composes: rootTwo;
+    grid-template-columns: 1fr 1.43fr;
+}
+
+.rootOne {
+    grid-template-columns: unset;
+    /* margin: 70px 0 55px 0; */
+}
+
+.section {
+    height: auto;
+}
+
+.sectionImage {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+}
+
+.bannerImageLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bannerImageLink img {
+    width: 100%;
+}
+
+/* tablet */
+.rootTablet {
+    grid-gap: 15px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 15px;
+}
+
+.rootTablet .sectionImage {
+    width: 100%;
+    height: 356px;
+    object-fit: contain;
+}
+
+.rootTablet.rootThree .sectionImage {
+    height: 356px;
+}
+
+/* mobile */
+.rootMobile {
+    grid-template-columns: repeat(auto-fit, 100%);
+    justify-content: flex-start;
+    grid-gap: 20px;
+    height: auto;
+    padding: 0 15px;
+    margin: 0;
+}
+.rootMobile .sectionImage {
+    width: 100%;
+    height: 320px;
+}
+
+.rootMobile .sectionImage {
+    width: 100%;
+    height: 167px;
+    object-fit: cover;
+}
+.rootMobile.rootThree .sectionImage {
+    height: 167px;
+}
+
+@media (min-width: 787px) and (max-width: 1024px) {
+    .root {
+        grid-template-columns: auto;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .sectionImage {
+        width: 100%;
+        height: 320px;
+    }
+}

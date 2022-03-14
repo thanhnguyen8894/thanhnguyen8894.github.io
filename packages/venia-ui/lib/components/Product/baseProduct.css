@@ -1,0 +1,351 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+    margin: 2px 0;
+}
+
+.root:hover,
+.rootMobile:hover,
+.rootTablet:hover {
+    box-shadow: 
+        rgb(0 0 0 / 7%) 0px 5px 6px, 
+        rgb(0 0 0 / 12%) 0px 8px 5px, 
+        rgb(0 0 0 / 4%) 0px 4px 7px, 
+        rgb(0 0 0 / 0%) 0px 5px 0px, 
+        rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+
+.root:hover .actions,
+.rootMobile:hover .actions,
+.rootTablet:hover .actions {
+    visibility: visible;
+}
+
+.root:hover .wishlistArea,
+.rootMobile:hover .wishlistArea,
+.rootTablet:hover .wishlistArea {
+    display: block;
+}
+
+.productImage {
+    position: relative;
+    /* padding: 25px 0; */
+    display: flex;
+    width: 100%;
+    background-color: white;
+}
+
+.productImage .image {
+    object-fit: contain;
+}
+
+.productImageLink {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wishlistArea {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 12px;
+    display: none;
+}
+
+.productTimer {
+    position: absolute;
+    width: 180px;
+    height: 30px;
+    border: 0.5px solid #f8f8f8;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    background: #ffffff;
+    left: 75px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.timer {
+    padding-inline-end: 8px;
+}
+
+.timer span {
+    padding: 0 3px;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    color: var(--venia-black-color);
+    text-transform: uppercase;
+}
+
+.timer .endTime {
+    color: #e27b27;
+}
+
+.productTimer img {
+    margin-bottom: 3px;
+}
+
+.productName {
+    padding: 8px 0 15px;
+    text-align: center;
+}
+
+.productName .name {
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19.5px;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    height: 39px;
+}
+
+.productName .brandName {
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19.5px;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.priceProduct {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.priceProduct .price {
+    color: #000000;
+    font-size: 14px;
+    line-height: 18.2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-inline-end: 6px;
+}
+
+.priceProduct .specialPrice {
+    color: #c5010e;
+
+    font-size: 14px;
+    line-height: 18.2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-inline-end: 6px;
+}
+
+.priceProduct .discountPrice {
+    color: #000000;
+    font-size: 13px;
+    line-height: 16.9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration-line: line-through;
+    padding-inline-end: 6px;
+    opacity: 0.5;
+}
+
+.starProduct {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 24px;
+    min-height: 48px;
+}
+
+.actions {
+    text-align: center;
+    visibility: hidden;
+}
+
+.addToCart {
+    width: 130px;
+    height: 36px;
+    border: 1px solid var(--venia-black-color);
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--venia-black-color);
+    margin: 0 0 20px 0;
+}
+
+.wishlist {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 12px;
+    display: none;
+}
+
+.wishlistAdded {
+    border: unset;
+    background-color: unset;
+}
+
+.wishlistHidden {
+    display: none;
+}
+
+.iconSelect {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+/* tablet */
+.rootTablet {
+    max-width: 218px;
+    float: left;
+}
+.rootTablet .timer span {
+    font-size: 15px;
+    line-height: 15px;
+}
+.rootTablet .productTimer {
+    left: 20px;
+}
+.rootTablet .productImage {
+    padding: 20px 0;
+}
+.rootTablet .productName {
+    padding: 13px 0 11px 0;
+    text-align: center;
+}
+.rootTablet .productName .name {
+    font-size: 18px;
+    line-height: 21.6px;
+    height: 43.2px;
+}
+.rootTablet .priceProduct .price,
+.rootTablet .priceProduct .discountPrice {
+    line-height: 14px;
+    font-size: 14px;
+}
+/* .rootTablet .priceProduct {
+    padding-bottom: 15px;
+} */
+
+.rootTablet .starProduct {
+    padding-bottom: 19px;
+    min-height: 43px;
+}
+.rootTablet .addToCart {
+    font-size: 14px;
+    line-height: 16.41px;
+}
+
+/* mobile */
+.rootMobile {
+    max-width: 150px;
+    float: left;
+}
+
+.rootMobile .timer span {
+    font-size: 12px;
+    line-height: 12px;
+}
+.rootMobile .productTimer {
+    width: 120px;
+    height: 25px;
+    left: 20px;
+    top: 8px;
+}
+
+.rootMobile .productTimer img {
+    margin-bottom: 0;
+}
+
+.rootMobile .productImage {
+}
+
+.rootMobile .productName {
+    padding: 15px 0 10px 0;
+    text-align: center;
+}
+
+.rootMobile .productName .name {
+    font-size: 14px;
+    line-height: 16.8px;
+    height: 33.6px;
+}
+
+.rootMobile .priceProduct .price,
+.rootMobile .priceProduct .discountPrice {
+    line-height: 14px;
+    font-size: 13px;
+}
+
+.rootMobile .addToCart {
+    font-size: 12px;
+    line-height: 14.06px;
+}
+
+/* .rootMobile .priceProduct {
+    padding-bottom: 13px;
+} */
+
+.rootMobile .starProduct {
+    padding-bottom: 18px;
+    min-height: 43px;
+}
+
+.rootMobile.customMobileProductDetails {
+    width: 165px;
+}
+
+.rootMobile .customMobileProductDetails .productImage {
+    padding-top: 10px;
+}
+
+/* Sub Desktop */
+.rootSubDes {
+    max-width: 280px;
+}
+
+.rootSubDes .productTimer {
+    height: 25px;
+    width: 160px;
+    left: 10px;
+}
+
+.rootSubDes .starProduct {
+    padding-bottom: 19px;
+    min-height: 43px;
+}

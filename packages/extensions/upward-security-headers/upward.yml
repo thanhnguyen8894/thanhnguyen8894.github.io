@@ -1,0 +1,26 @@
+veniaSecurityHeaders:
+    resolver: inline
+    inline:
+        content-security-policy:
+            resolver: template
+            engine: mustache
+            provide:
+                backend: env.MAGENTO_BACKEND_URL
+            template:
+                resolver: conditional
+                when:
+                    - matches: env.NODE_ENV
+                      pattern: development
+                      use:
+                          inline: ''
+                default:
+                    inline: "script-src 'self' *.criteo.com *.criteo.net 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com http: https: {{ backend }}; style-src 'self' blob: https: 'unsafe-inline' {{ backend }}; img-src data: http: https: www.googletagmanager.com https://www.google-analytics.com; object-src 'none'; base-uri 'none'; child-src 'self'; font-src 'self' {{ backend }} fonts.gstatic.com cdnjs.cloudflare.com; frame-src *.webengage.co *.snapchat.com facebook.com new.arabianoud.com assets.braintreegateway.com *.youtube.com *.youtu.be *.vimeo.com *.google.com https://ppipe.net/ https://oppwa.com *.emcrey.com *.hotjar.com *.cardinalcommerce.com https://secure5.arcot.com/ *.arcot.com *.pubhtml5.com *.flixgvid.flix360.io *.flix360.io *.flixcar.com *.flixfacts.com *.flixfacts.co.uk *.flixsyndication.net *.flix360.com *.jwplatform.com *.jwpsrv.com *.jwpcdn.com *.cloudfront.net *.pointandplace.com *.flixsyndication.net *.alahli.com *.criteo.com *.criteo.net *.doubleclick.net"
+
+        strict-transport-security:
+            inline: max-age=31536000
+        x-content-type-options:
+            inline: nosniff
+        x-frame-options:
+            inline: SAMEORIGIN
+        x-xss-protection:
+            inline: '1; mode=block'

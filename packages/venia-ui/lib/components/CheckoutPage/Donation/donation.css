@@ -1,0 +1,73 @@
+
+.root{
+  max-width: 488px;
+  width: 100%;
+  margin-bottom: 50px
+}
+
+.rootMobile,
+.rootTablet {}
+
+.inputBlock{
+  display: flex;
+  justify-content: space-between;
+  direction: ltr;
+}
+
+.opinionInput{
+  border: none;
+}
+
+.textWarning{
+  border-left: 3px solid black;
+  padding: 5px 5px;
+  color: #C5010E;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.title {
+  color: var(--venia-black-color);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36.4px;
+  margin-bottom: 20px;
+}
+
+.subTitle {
+  color: var(--venia-black-color);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.rootTablet .subTitle {
+  font-size: 15px;
+}
+
+
+.rootMobile .title {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+.rootMobile .subTitle {
+    font-size: 14px;
+    line-height: 16.8px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .root {
+    max-width: 100%;
+    margin: 30px 0;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1320px) {
+  .root {
+    max-width: 592px;
+    margin: 30px auto;
+  }
+}

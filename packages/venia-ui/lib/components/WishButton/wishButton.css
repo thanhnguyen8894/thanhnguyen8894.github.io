@@ -1,0 +1,29 @@
+.root {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color-button);
+}
+
+.loading {
+    background-color: transparent;
+}
+
+.active {
+    background-color: transparent;
+}
+
+.heartImage {
+    position: relative;
+    display: flex;
+    height: auto;
+}
+
+.rootMobile {
+    height: 30px;
+    width: 30px;
+}
